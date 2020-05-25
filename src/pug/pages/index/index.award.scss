@@ -1,0 +1,62 @@
+.award {
+  &__reward {
+    margin: 0 0 60px 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 420px;
+    height: 220px;
+    margin: 0 40px 0 0;
+  }
+
+  &__img {
+    height: 40px;
+    margin: 0 120px 40px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+  }
+
+  &__text {
+    line-height: 170%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .award {
+    &__item {
+      width: 500px;
+      height: 100px;
+    }
+
+    &__img {
+      width: 150px;
+      height: 60px;
+      margin: 0 50px;
+    }
+
+    &__title {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 15px 20px;
+    }
+
+    &__text {
+      margin-left: 30px;
+    }
+  }
+}
