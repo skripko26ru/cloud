@@ -1,0 +1,111 @@
+//- -
+//- 	var competenceList = [	
+//- 		{ title: 'Native App', path: '/../assets/img/native.png', name: 'native'},
+//- 		{ title: 'Prototype', path: '/../assets/img/prototype.png', name: 'prototype'},
+//- 		{ title: 'Designе', path: '/../assets/img/design.png', name: 'design'},
+//- 		{ title: 'Back-end', path: '/../assets/img/backend.png', name: 'backend'},
+//- 		{ title: 'Front-end', path: '/../assets/img/frontend.png', name: 'frontend'},
+//- 		{ title: 'MiddleWare', path: '/../assets/img/middleware.png', name: 'middleware'},
+//- 	]
+
+mixin competence(native, prototype, design, backend, frontend, middleware)
+	.competence__title Наши компетенции
+
+	if native
+		.competence--margin-left
+			.competence__block
+				.competence__block-img
+					img(src= '/../assets/img/native.png' alt= 'native')
+				.competence__block-text Native App
+			.competence__line
+			.competence__text Нативные приложения оптимизированы под конкретные операционные системы, такие как IOS/Android	
+	else
+		.competence__block
+			.competence__block-img(style= 'margin-left: 3px') 
+				img(src= '/../assets/img/native.png' alt= 'native')
+			.competence__block-text(style= 'margin-left: 10px') Native App
+
+	if prototype
+		.competence--margin-left
+			.competence__block
+				.competence__block-img
+					img(src= '/../assets/img/prototype.png' alt= 'prototype')
+				.competence__block-text Prototype
+			.competence__line
+			.competence__text Создание интерактивных высокоточных прототипов является средством измерения эффективности дизайна
+	else
+		.competence__block
+			.competence__block-img
+				img(src= '/../assets/img/prototype.png' alt= 'prototype')
+			.competence__block-text(style= 'margin-left: 5px') Prototype
+
+	if design
+		.competence--margin-left
+			.competence__block
+				.competence__block-img 
+					img(src= '/../assets/img/design.png' alt= 'design')
+				.competence__block-text Design
+			.competence__line
+			.competence__text «Дизайн – это не только, как предмет выглядит и ощущается. Дизайн – это то, как он работает» Стив Джобс
+	else
+		.competence__block
+			.competence__block-img(style= 'margin-left: 1px')
+				img(src= '/../assets/img/design.png' alt= 'design')
+			.competence__block-text(style= 'margin-left: 5px') Design
+
+	if backend
+		.competence--margin-left
+			.competence__block
+				.competence__block-img
+					img(src= '/../assets/img/backend.png' alt= 'backend')
+				.competence__block-text Back-end
+			.competence__line
+			.competence__text Наша команда - это опытные разработчики Php/MySQL/PostgreSQL
+	else
+		.competence__block
+			.competence__block-img(style= 'margin-left: 1px')
+				img(src= '/../assets/img/backend.png' alt= 'backend')
+			.competence__block-text(style= 'margin-left: 5px') Back-end		
+
+	if frontend
+		.competence--margin-left
+			.competence__block
+				.competence__block-img
+					img(src= '/../assets/img/frontend.png' alt= 'frontend')
+				.competence__block-text Front-end
+			.competence__line
+			.competence__text Наша команда - это опытные разработчики Java Script/React Native/Vue/Angular/Type Script
+	else
+		.competence__block
+			.competence__block-img
+				img(src= '/../assets/img/frontend.png' alt= 'frontend')
+			.competence__block-text Front-end		
+
+	if middleware
+		.competence--margin-left
+			.competence__block
+				.competence__block-img
+					img(src= '/../assets/img/middleware.png' alt= 'middleware')
+				.competence__block-text Middleware
+			.competence__line
+			.competence__text Комплекс технологического программного обеспечения для взаимодействия между приложениями, системами и компонентами
+	else
+		.competence__block
+			.competence__block-img(style= 'margin-left: 1px')
+				img(src= '/../assets/img/middleware.png' alt= 'middleware')
+			.competence__block-text(style= 'margin-left: 2px') Middleware	
+
+
+	//- each item in competenceList
+	//- 	.competence__block
+	//- 		.competence__block-img
+	//- 			img(src= item.path alt= item.name)
+	//- 		.competence__block-text= item.title
+
+
+
+
+
+
+
+

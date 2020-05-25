@@ -1,0 +1,35 @@
+.blog-open {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &__title {
+    width: 810px;
+    margin: 294px 0 30px 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__date {
+    width: 810px;
+    font-size: 20px;
+    margin: 0 0 106px 0;
+  }
+
+  &__text {
+    width: 810px;
+    line-height: 170%;
+    margin: 0 0 20px 100px;
+  }
+
+
+  &--ground-fix {
+    position: fixed;
+    width: 100%;
+    height: 140px;
+    background: $BG;
+    z-index: 1;
+  }
+}
+
+// @media screen and (max-width: 1400px) {}

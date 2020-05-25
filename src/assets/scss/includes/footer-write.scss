@@ -1,0 +1,12 @@
+.footer-write {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 80px;
+
+  &__text {
+    position: fixed;
+    right: 180px;
+  }
+}
+

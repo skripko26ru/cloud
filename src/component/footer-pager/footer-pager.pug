@@ -1,0 +1,9 @@
+mixin footerPager(pageTotal, pageCurrent = 1)
+  - var current = pageCurrent < 10 ? '0' + pageCurrent : pageCurrent;
+  - var total = pageCurrent < 10 ? '0' + pageTotal : pageTotal;
+  .footer-pager
+    span.footer-pager__current= current
+    .footer-pager__line
+      .footer-pager__progress
+    span.footer-pager__total(data-pager-total= pageTotal)= total
+

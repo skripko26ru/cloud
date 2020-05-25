@@ -1,0 +1,100 @@
+.client-pro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__block-1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 460px;
+    max-height: 300px;
+    margin: 180px 200px 0 40px;
+
+    @media screen and (max-width: 1500px) {
+      width: 380px;
+      margin: 180px 50px 0 40px;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 220px;
+      max-height: 350px;
+      margin: 80px 30px 0 30px;
+    }
+
+    &-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 26px;
+      }
+    }
+
+    &-text {
+      line-height: 170%;
+      margin: 0 0 20px 0;
+
+      @media screen and (max-width: 1800px) {
+        margin: 0;
+      }
+    }
+
+    &-download {
+      margin: 0 35px 0 100px;
+
+      @media screen and (max-width: 1500px) {
+        margin: 0 35px 0 0;
+      }
+    }
+
+    &-apple {
+      margin: 0 35px 0 0;
+    }
+  }
+
+  &__block-2 {
+    position: relative;
+    width: 560px;
+    height: 636px;
+    margin: 0 150px 0 0;
+
+    @media screen and (max-width: 1400px) {
+      width: 270px;
+      margin: 150px 30px 0 0;
+    }
+
+    @media screen and (max-width: 1100px) {
+      width: 200px;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 150px;
+    }
+
+    &-circle {
+      position: absolute;
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      bottom: 40px;
+      z-index: 1;
+      background: $RedDecor;
+
+      @media screen and (max-width: 1500px) {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &-phone {
+      position: absolute;
+      left: 120px;
+      z-index: 2;
+
+      @media screen and (max-width: 1400px) {
+        left: 0;
+      }
+    }
+  }
+}

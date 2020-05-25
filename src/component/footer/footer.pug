@@ -1,0 +1,11 @@
+include ../footer-pager/footer-pager
+
+mixin footer(pager)
+  .footer
+    if pager
+      +footerPager(5)
+    .footer__menu
+      each item in footerList
+        a.footer__nav(href= item.href)= item.title
+
+

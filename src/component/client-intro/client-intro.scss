@@ -1,0 +1,122 @@
+.client-intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__block-1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 540px;
+    height: 480px;
+    margin: 100px 120px 0 40px;
+
+    @media screen and (max-width: 1400px) {
+      width: 400px; 
+      margin: 0 80px 100px 40px;    
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 300px;  
+      margin: 0 50px 150px 30px;        
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 200px;       
+    }
+
+    &-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 26px;      
+      }
+  
+    }
+
+    &-text-1 {
+      line-height: 170%;
+      margin: 0 0 0 100px;
+
+      @media screen and (max-width: 1800px) {
+        margin: 0;
+      }
+    }
+
+    &-line {
+      width: 16px;
+      height: 2px;
+      margin: 15px 10px 0 100px;
+      background: $White;
+
+      @media screen and (max-width: 1800px) {
+        margin: 15px 10px 0 0;
+      }
+
+      @media screen and (max-width: 1400px) {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &-text-2 {
+      font-weight: 600;
+      margin: 0 100px 20px 0;
+    }
+
+    &-nav {
+      font-size: 20px;
+      margin: 0 200px 0 0;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__block-2 {
+    position: relative;
+    width: 560px;
+    height: 636px;
+    margin: 0 100px 0 0;
+
+    @media screen and (max-width: 1400px) {
+      width: 320px;      
+    }
+    
+    @media screen and (max-width: 900px) {
+      width: 200px;         
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 150px;         
+    }
+
+    &-circle {
+      position: absolute;
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      bottom: 40px;
+      z-index: 1;
+      background: $RedDecor;
+
+      @media screen and (max-width: 1400px) {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &-phone {
+      position: absolute;     
+      left: 120px;
+      z-index: 2;
+
+      @media screen and (max-width: 1400px) {        
+        left: 0;           
+      }
+    }
+  }
+}
+

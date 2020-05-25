@@ -1,0 +1,21 @@
+.footer-conf {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 80px;
+
+  &__text {
+    position: fixed;
+    left: 390px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-conf {
+    &__text {
+      position: fixed;
+      left: 214px;
+      font-size: 12px;
+    }
+  }
+}

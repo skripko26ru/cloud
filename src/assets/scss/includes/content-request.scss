@@ -1,0 +1,129 @@
+.content-request{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  height: 600px;
+  margin: 250px 0 0 400px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 130px 10px 0;
+  }
+
+  &__send {
+    width: 430px;
+    height: 360px;
+    margin: 0 200px 0 90px;
+    position: relative;
+    background-color: $White;
+  }
+
+  &__tube {
+    position: absolute;
+    left: 75px;
+    top: 75px;
+  }
+
+  &__input {
+    position: absolute;
+    left: 120px;
+    top: 75px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__line {
+    position: absolute;
+    width: 288px;
+    height: 1px;
+    left: 60px;
+    top: 120px;
+    background-color: $Gray;
+  }
+
+  &__text-1 {
+    position: absolute;
+    width: 288px;
+    height: 40px;
+    left: 60px;
+    top: 150px;
+    font-size: 12px;
+    color: $Gray;
+  }
+
+  &__button {
+    position: absolute;
+    width: 290px;
+    height: 65px;
+    left: 67px;
+    top: 240px;
+    border-radius: 5px;
+    color: $White;
+    background-color: $Blue;
+  }
+
+  &__info {
+    width: 400px;
+    height: 150px;
+    position: relative;
+    margin: 50px 0 0 0;
+  }
+
+  &__pointer {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+  }
+
+  &__text-2 {
+    position: absolute;
+    left: 50px;
+    top: 25px;
+  }
+
+  &__email {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+  }
+
+  &__text-3 {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .content-request{
+    width: 1000px;
+    margin: 250px 0 0 200px;
+
+    &__send {
+      margin: 0 50px 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .content-request{
+    width: 800px;
+    margin: 200px 0 0 100px;
+
+    &__title {
+      font-size: 28px;
+      margin: 0 0 0 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content-request{
+    margin: 200px 0 0 50px;
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+}

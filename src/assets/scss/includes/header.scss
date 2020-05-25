@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 80px;
+
+  &__logo {
+    font-family: $secondFont;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 170px 0 80px;
+  }
+  &__nav {
+    margin: 0 40px;
+  }
+  &__phone {
+    position: fixed;
+    right: 80px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    top: 40px;
+
+    &__logo {
+      margin: 0 40px 20px 40px;
+    }
+
+    &__phone {
+      position: static;
+      margin: 0 40px;
+    }
+  }
+}
