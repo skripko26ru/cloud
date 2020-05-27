@@ -1,0 +1,36 @@
+-
+	var list = [	
+		{ name: 'performance-vtb', title: 'ВТБ Мои инвестиции', text: 'Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ и ориентировано на клиентов, самостоятельно управляющих  своими инвестициями' },
+		{ name: 'performance-bks', title: 'БКС Мой Брокер', text: '' },
+		{ name: 'performance-psb', title: 'ПСБ Инвестиции', text: 'Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ и ориентировано на клиентов, самостоятельно управляющих  своими инвестициями' },		
+		{ name: 'performance-rshb', title: 'РСХБ Брокер', text: 'Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ и ориентировано на клиентов, самостоятельно управляющих  своими инвестициями' },
+		{ name: 'performance-alpha', title: 'АльфаСтрахование', text: 'Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ и ориентировано на клиентов, самостоятельно управляющих  своими инвестициями' },
+	]	
+
+mixin performance(index, yes, color)
+	.container
+		.performance
+			.performance__wrap
+				each item in list				
+					.performance__item(class= (item === list[index]? 'active' : ''))
+						.performance__header= item.title	
+						.performance__text= item.text
+						if yes
+							.performance__detail
+								.performance__detail-line(style=`background-color: ${color}`)
+								.performance__detail-label Подробнее о проекте
+		//- .performance__circle(style=`background-color: ${list[index].circle}`)
+
+
+
+
+
+	//- img.competence__img(src= '/../assets/img/'+ item.name +'.png' alt= item.name)
+
+	//- circle: '#CE1E3B', 	
+	//- color: '#FFFFFF', 
+	//- back: '#112A94'
+
+	//- circle: '#45309C', 	
+	//- color: '#43495B', 
+	//- back: '#F9F9FD'

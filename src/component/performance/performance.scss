@@ -1,0 +1,77 @@
+.performance { 
+  &__wrap {
+    width: 534px;
+  }
+
+  &__item {
+    margin-bottom: 40px;   
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__header {      
+    font-size: 20px;
+    cursor: pointer;
+
+    .active & {
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 700;
+      cursor: default;
+    }
+  }
+
+  &__text {
+    display: none;
+    width: 434px;
+    margin: 0 0 24px 100px;
+    line-height: 170%;
+
+    .active & {
+      display: block;
+    }
+  }
+
+  &__detail {
+    display: none;
+    width: 212px;
+    height: 16px;
+    position: relative;    
+    margin: 0 0 60px 100px;    
+
+    &-line {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 16px;
+      height: 2px;
+      background-color: $MainDark;
+    }
+
+    &-label {
+      position: absolute;
+      right: 0;      
+    }
+
+    .active & {
+      display: block;
+    }
+  }
+}
+
+// &-circle {
+//   position: absolute;
+//   width: 560px;
+//   height: 560px;
+//   border-radius: 50%;
+//   bottom: 40px;
+//   z-index: 1;
+//   background: $RedDecor;
+
+//   @media screen and (max-width: 1400px) {
+//     width: 0;
+//     height: 0;
+//   }
+// }
