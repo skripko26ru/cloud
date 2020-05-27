@@ -6,18 +6,20 @@ block db
 block content
 	main#main.container
 		include ./index/_index.intro.pug
-		include ./index/_index.about.pug	
-		include ./index/_index.clients.pug
-		include ./index/_index.award.pug
+		//- include ./index/_index.about.pug	
+		//- include ./index/_index.clients.pug
+		//- include ./index/_index.award.pug
+		//- include ./index/_index.competence.pug
+		include ./index/_index.presentation.pug
 
-		include ./intro/_intro-vtb.pug
-		include ./intro/_intro-bks.pug
-		include ./intro/_intro-psb.pug
-		include ./intro/_intro-rshb.pug
-		include ./intro/_intro-alpha.pug
-		include ./index/_index.competence.pug
+		//- include ./intro/_intro-vtb.pug
+		//- include ./intro/_intro-bks.pug
+		//- include ./intro/_intro-psb.pug
+		//- include ./intro/_intro-rshb.pug
+		//- include ./intro/_intro-alpha.pug
+		
 
-		include ./index/_index.request.pug   	
+		//- include ./index/_index.request.pug   	
 
 block footer
 	+footer(true)
