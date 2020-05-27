@@ -1,23 +1,8 @@
 include ../../component/header/header
 include ../../component/footer/footer
+include ./db.pug
 
-- var zz = 'digital cloud_';
--
-	var navList = [
-		{ title: '', href: '/#/'},
-		{ title: 'Компания', href: '/#/company'},
-		{ title: 'Проекты', href: '/#/project'},
-		{ title: 'Услуги', href: '/#/service'},
-		{ title: 'Контакты', href: '/#/contacts'},
-	]
-
--
-	var footerList = [
-		{ title: 'Политика конфиденциальности', href: '/policy'},
-		{ title: 'Напишите нам', href: '/writeus'},
-		{ title: 'Блог', href: '/blog'},
-	]
-
+block db
 
 doctype html
 html(lang='en')
@@ -27,9 +12,14 @@ html(lang='en')
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		meta(http-equiv='X-UA-Compatible' content='ie=edge')
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+		block head
+
 	body.screen-0
 		block header
 			+header()
 		block content
 		block footer
 			+footer()
+	
+	block bodyEnd
+

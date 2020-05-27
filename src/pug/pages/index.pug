@@ -1,36 +1,23 @@
 extends ../layout/main.pug
 
+block db
+	- var navActive = 'main';
+
 block content
-	//- main
-		//- include ./portfolio/portfolio.pug
-		//- include ./services/services.pug
-		//- include ./about/about.pug
-		//- include ./blog/blog.pug		
-		//- include ./blog-open/blog-open.pug		
-
 	main#main.container
-		include ./index/index.intro.pug
-		//- include ./index/index.about.pug	
-		//- include ./index/index.clients.pug
-		//- include ./index/index.award.pug
-		//- include ./intro/intro-vtb.pug
+		include ./index/_index.intro.pug
+		include ./index/_index.about.pug	
+		include ./index/_index.clients.pug
+		include ./index/_index.award.pug
 
-		//- include ./intro/intro-bks.pug
-		//- include ./intro/intro-psb.pug
-		//- include ./intro/intro-rshb.pug
-		//- include ./intro/intro-alpha.pug
-		//- include ./competences/comp-native.pug
-		//- include ./competences/comp-prototype.pug
-		//- include ./competences/comp-design.pug
-		//- include ./competences/comp-backend.pug
-		//- include ./competences/comp-frontend.pug
-		//- include ./competences/comp-middleware.pug
-		//- include ./projects/pro-vtb.pug		
-		//- include ./projects/pro-psb.pug
-		//- include ./projects/pro-rshb.pug
-		//- include ./projects/pro-alpha.pug
-		//- include ./projects/pro-bks.pug
-		include ./index/index.request.pug   	
+		include ./intro/_intro-vtb.pug
+		include ./intro/_intro-bks.pug
+		include ./intro/_intro-psb.pug
+		include ./intro/_intro-rshb.pug
+		include ./intro/_intro-alpha.pug
+		include ./index/_index.competence.pug
+
+		include ./index/_index.request.pug   	
 
 block footer
 	+footer(true)

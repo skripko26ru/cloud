@@ -5,7 +5,7 @@ mixin footer(pager)
     if pager
       +footerPager(5)
     .footer__menu
-      each item in footerList
+      each item in navFooter
         a.footer__nav(href= item.href)= item.title
 
 

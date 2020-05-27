@@ -1,13 +1,13 @@
-mixin header()
+mixin header(opts)
 	.header
-		.header__logo= zz
+		a.header__logo(href='/') digital cloud_
 		.header__wrap
 			.container
 				.header__menu
-					each nav in navList
-						if nav.title
-							a.header__nav(href= nav.href)= nav.title
+					each nav in navHeader
+						a.header__nav(href= nav.href class=(nav.name === navActive ? 'active' : ''))= nav.title
 			.header__phone +7 (999) 745-55-55
+
 		.header__burger
 			.header__burger-line-1
 			.header__burger-line-2

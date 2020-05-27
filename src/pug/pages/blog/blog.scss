@@ -22,7 +22,7 @@
     width: 380px;
     height: 314px;
     position: relative;
-    // margin: 0 0 90px 0;
+    margin: 44px 0;
     background: $White;
 
     &-date {
@@ -74,7 +74,9 @@
   }
 
   &--margin-1 {
-    margin-top: 100px;
+    // margin-top: 100px;
+    position: relative;
+    top: 100px
   }
 }
 

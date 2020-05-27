@@ -13,9 +13,18 @@ const PATHS = {
 
 // Pages const for HtmlWebpackPlugin
 const PAGES_DIR = `${PATHS.src}/pug/pages`;
-const PAGES = fs
-  .readdirSync(PAGES_DIR)
-  .filter(fileName => fileName.endsWith(".pug"));
+const PAGES = getPugFromDir(PAGES_DIR);
+
+function getPugFromDir(base, dir = '') {
+  const temp = [];
+  fs.readdirSync(path.join(base, dir))
+    .forEach(file => {
+      const filepath = path.join(dir, file);
+      if (file.endsWith(".pug") && file[0] !== '_') temp.push(filepath);
+      else if (!file.includes('.')) temp.push(...getPugFromDir(base, filepath))
+    })
+  return temp;
+}
 
 module.exports = {
   externals: {

@@ -1,0 +1,18 @@
+block maindb
+  -
+    var navHeader = [
+      { name: 'about', title: 'Компания', href: '/about'},
+      { name: 'projects', title: 'Проекты', href: '/projects'},
+      { name: 'services', title: 'Услуги', href: '/services'},
+      { name: 'contacts', title: 'Контакты', href: '/contacts'},
+    ]
+
+  -
+    var navFooter = [
+      { name: 'policy', title: 'Политика конфиденциальности', href: '/policy'},
+      { title: 'Напишите нам', href: '/#writeus'},
+      { name: 'blog', title: 'Блог', href: '/blog'},
+    ]
+
+  -
+    var navList = [{ name: 'main', href: '/' }, ...navHeader, ...navFooter.filter(nav => nav.name)];
