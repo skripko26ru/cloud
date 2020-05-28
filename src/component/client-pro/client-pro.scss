@@ -1,100 +1,81 @@
-.client-pro {
+.client {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 
-  &__block-1 {
-    display: flex;
-    flex-wrap: wrap;
+  &__wrap-1 {
     width: 460px;
-    max-height: 300px;
-    margin: 180px 200px 0 40px;
+    margin-top: 170px;
+  }
 
-    @media screen and (max-width: 1500px) {
-      width: 380px;
-      margin: 180px 50px 0 40px;
-    }
+  &__wrap-2 {
+    width: 560px;
+    height: 636px;
+    position: relative;
+    margin-right: 80px;
 
-    @media screen and (max-width: 800px) {
-      width: 220px;
-      max-height: 350px;
-      margin: 80px 30px 0 30px;
-    }
-
-    &-title {
-      font-size: 32px;
-      font-weight: 700;
-      margin: 0 0 20px 0;
-
-      @media screen and (max-width: 1400px) {
-        font-size: 26px;
-      }
-    }
-
-    &-text {
-      line-height: 170%;
-      margin: 0 0 20px 0;
-
-      @media screen and (max-width: 1800px) {
-        margin: 0;
-      }
-    }
-
-    &-download {
-      margin: 0 35px 0 100px;
-
-      @media screen and (max-width: 1500px) {
-        margin: 0 35px 0 0;
-      }
-    }
-
-    &-apple {
-      margin: 0 35px 0 0;
+    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
+      width: 356px;
+      height: 452px;
+      margin: 80px 80px 0 0;
     }
   }
 
-  &__block-2 {
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 46px;
+  }
+
+  &__text {
+    line-height: 170%;
+    margin-bottom: 51px;  
+  }
+
+  &__download {
+    width: 200px;
+    height: 32px;
     position: relative;
+    margin-left: 100px;    
+
+    &-label {
+      position: absolute;
+      top: 2px;
+      font-size: 20px;
+    }
+
+    &-apple {
+      position: absolute;
+      left: 115px;
+    }
+
+    &-android {
+      position: absolute;
+      left: 170px;
+    }
+  }
+
+  &__circle {
     width: 560px;
-    height: 636px;
-    margin: 0 150px 0 0;
+    height: 560px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 38px;
 
-    @media screen and (max-width: 1400px) {
-      width: 270px;
-      margin: 150px 30px 0 0;
+    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
+      width: 356px;
+      height: 356px;
+      top: 24px;
     }
+  }
 
-    @media screen and (max-width: 1100px) {
-      width: 200px;
-    }
+  &__img {
+    width: 320px;
+    position: absolute;
+    left: 120px;
 
-    @media screen and (max-width: 800px) {
-      width: 150px;
-    }
-
-    &-circle {
-      position: absolute;
-      width: 560px;
-      height: 560px;
-      border-radius: 50%;
-      bottom: 40px;
-      z-index: 1;
-      background: $RedDecor;
-
-      @media screen and (max-width: 1500px) {
-        width: 0;
-        height: 0;
-      }
-    }
-
-    &-phone {
-      position: absolute;
-      left: 120px;
-      z-index: 2;
-
-      @media screen and (max-width: 1400px) {
-        left: 0;
-      }
+    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
+      width: 204px;
+      left: 76px;
     }
   }
 }

@@ -3,7 +3,7 @@ let isAnimating = false;
 const screenSwitchTime = 1000;
 const screenActiveClass = "screen--active";
 
-const $main = $("#main");
+const $main = $("#scroll");
 const $body = $("body");
 const $screenList = $(".screen");
 

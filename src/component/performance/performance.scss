@@ -1,17 +1,38 @@
-.performance { 
-  &__wrap {
+.performance {
+  display: flex;
+  justify-content: space-between;
+
+  &__wrap-1 {
     width: 534px;
+    margin-top: 50px;
+  }
+
+  &__wrap-2 {
+    width: 560px;
+    height: 636px;
+    position: relative;
+    margin-right: 80px;
+
+    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
+      width: 356px;
+      height: 452px;
+      margin: 80px 80px 0 0;
+    }
   }
 
   &__item {
-    margin-bottom: 40px;   
+    margin-bottom: 40px;
 
     &:last-child {
       margin-bottom: 0;
     }
+
+    @media screen and (max-height: 900px) {
+      margin-bottom: 20px;
+    }
   }
 
-  &__header {      
+  &__header {
     font-size: 20px;
     cursor: pointer;
 
@@ -38,10 +59,14 @@
     display: none;
     width: 212px;
     height: 16px;
-    position: relative;    
-    margin: 0 0 60px 100px;    
+    position: relative;
+    margin: 0 0 60px 100px;
 
-    &-line {
+    @media screen and (max-height: 900px) {
+      margin: 0 0 40px 100px;
+    }
+
+    &-dash {
       position: absolute;
       left: 0;
       top: 10px;
@@ -52,26 +77,40 @@
 
     &-label {
       position: absolute;
-      right: 0;      
+      right: 0;
     }
 
     .active & {
       display: block;
     }
+
+    @media screen and (max-height: 900px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__circle {
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 38px;
+
+    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
+      width: 356px;
+      height: 356px;
+      top: 24px;
+    }
+  }
+
+  &__img {
+    width: 320px;
+    position: absolute;
+    left: 120px;
+
+    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
+      width: 204px;
+      left: 76px;
+    }
   }
 }
-
-// &-circle {
-//   position: absolute;
-//   width: 560px;
-//   height: 560px;
-//   border-radius: 50%;
-//   bottom: 40px;
-//   z-index: 1;
-//   background: $RedDecor;
-
-//   @media screen and (max-width: 1400px) {
-//     width: 0;
-//     height: 0;
-//   }
-// }

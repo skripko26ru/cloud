@@ -4,12 +4,14 @@ block db
 	- var navActive = 'projects';
 
 block content
-	main
-		include ./_pro-vtb.pug	
+	main#scroll
+		include ./_pro-vtb.pug
 		include ./_pro-psb.pug
 		include ./_pro-rshb.pug
 		include ./_pro-alpha.pug
 		include ./_pro-bks.pug
+		
+		//- include ./vtb.pug	
 
 block footer
 	+footer(true)

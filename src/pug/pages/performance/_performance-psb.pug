@@ -1,5 +1,18 @@
-include ../../../component/client-intro/client-intro.pug
+include ../../../component/performance/performance.pug
 
-.screen(data-pager="3").container.styles__psb  
-	+clientIntro(0)
+.screen(data-pager="3" style="background-color: #2C2D84; color: #FFFFFF;" )
+	+performance(2, '#E9894D', 'performance-psb')
+
+
+// style: background-color задаёт цвет бэкграунда, а color - соответственно шрифта
+// если color не указан, то цвет дефолтный ($MainDark)
+// 1 параметр миксина - индекс клиента в общем списке:
+// 0 - ВТБ;  1 - БКС;	 2 - ПСБ;  3 - РСХБ;  4 - АльфаСтрахование	
+// 2 параметр - цвет круга на котором находится картинка телефона
+// 3 параметр - название картинки телефона
+// 4 параметр - нужен ли текст "подробнее о проекте" с предваряющим тире?
+// если параметр отсутствует - нет
+// если указана любая строка кроме пустой - да
+// 5 параметр - цвет тире 
+// если параметр отсутствует - тире дефолтного цвета ($MainDark)
 

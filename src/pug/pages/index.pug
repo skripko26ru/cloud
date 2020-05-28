@@ -4,7 +4,7 @@ block db
 	- var navActive = 'main';
 
 block content
-	main#main.container
+	main#scroll.container
 		include ./index/_index.intro.pug
 		//- include ./index/_index.about.pug	
 		//- include ./index/_index.clients.pug
@@ -13,12 +13,10 @@ block content
 
 		include ./performance/_performance-vtb.pug
 		include ./performance/_performance-bks.pug
-		//- include ./intro/_intro-bks.pug
-		//- include ./intro/_intro-psb.pug
-		//- include ./intro/_intro-rshb.pug
-		//- include ./intro/_intro-alpha.pug
+		include ./performance/_performance-psb.pug
+		include ./performance/_performance-rshb.pug
+		include ./performance/_performance-alpha.pug	
 		
-
 		include ./index/_index.request.pug   	
 
 block footer
