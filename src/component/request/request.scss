@@ -1,0 +1,103 @@
+.request {
+  display: flex;
+  flex-wrap: wrap;
+  height: 480px;
+
+  &__title {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 80px;
+  }
+
+  &__send {
+    width: 430px;
+    height: 360px;
+    position: relative;
+    margin: 0 200px 0 100px;
+    background-color: $White;
+
+    @media screen and (max-width: 1300px) {
+      margin: 0 35px 0 90px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      margin: 0 15px 0 80px;
+    }
+
+    &-tube {
+      position: absolute;
+      top: 75px;
+      left: 75px;
+    }
+
+    &-input {
+      position: absolute;
+      top: 75px;
+      left: 120px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &-line {
+      width: 288px;
+      height: 1px;
+      position: absolute;
+      top: 120px;
+      left: 60px;
+      background-color: $Gray;
+    }
+
+    &-text {
+      width: 288px;
+      height: 40px;
+      position: absolute;
+      top: 150px;
+      left: 60px;
+      font-size: 12px;
+      color: $Gray;
+    }
+
+    &-button {
+      width: 290px;
+      height: 65px;
+      position: absolute;
+      top: 240px;
+      left: 67px;
+      border-radius: 5px;
+      color: $White;
+      background-color: $Blue;
+    }
+  }
+
+  &__info {
+    width: 400px;
+    height: 150px;
+    position: relative;
+    margin-top: 50px;
+
+    &-pointer {
+      position: absolute;
+      top: 25px;
+      left: 10px;
+    }
+
+    &-address {
+      position: absolute;
+      top: 25px;
+      left: 50px;
+    }
+
+    &-envelope {
+      position: absolute;
+      top: 100px;
+      left: 10px;
+    }
+
+    &-email {
+      position: absolute;
+      top: 100px;
+      left: 50px;
+    }
+  }
+}

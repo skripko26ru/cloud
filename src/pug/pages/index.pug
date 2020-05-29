@@ -12,12 +12,12 @@ block content
 		//- include ./index/_index.competence.pug	
 
 		include ./performance/_performance-vtb.pug
-		include ./performance/_performance-bks.pug
-		include ./performance/_performance-psb.pug
-		include ./performance/_performance-rshb.pug
-		include ./performance/_performance-alpha.pug	
-		
-		include ./index/_index.request.pug   	
+		//- include ./performance/_performance-bks.pug
+		//- include ./performance/_performance-psb.pug
+		//- include ./performance/_performance-rshb.pug
+		//- include ./performance/_performance-alpha.pug	
+		.screen(data-pager="5")
+			include ./../../component/request/request.pug
 
 block footer
 	+footer(true)
