@@ -1,48 +1,43 @@
 .intro {
   background-image: url(../img/background.png);
-  background-size: cover;
 
   &__title {
     position: relative;
-    padding-left: 52px;
     margin-bottom: 16px;
-    font-size: 24px;
-    font-weight: 500;
+    padding-left: 52px;
+    font-family: $mediumFont;
+    font-size: 24px;    
+    line-height: 170%;    
 
-    @media screen and (max-width: 1100px) {
-      margin-left: 80px;
+    @media screen and (max-width: 650px), screen and (max-height: 500px) {
+      padding-left: 27px;
     }
 
-    @media screen and (max-width: 800px) {
-      margin-left: 40px;
-    }
-
-    &::before {
+    &:before {
       content: '';
-      position: absolute;
-      left: 0;
-      top: 55%;
       width: 40px;
       height: 2px;
+      position: absolute;
+      top: 55%;
+      left: 0;
       background: $MainDark;
+
+      @media screen and (max-width: 650px), screen and (max-height: 500px) {
+        width: 17px;
+        height: 1px;        
+      }
     }
   }
 
   &__text {
-    width: 700px;
-    font-size: 60px;
-    font-weight: 800;
+    max-width: 750px;
+    font-family: $extraBoldFont;
+    font-size: 60px;    
+    line-height: 130%;
 
-    @media screen and (max-width: 1100px) {
-      width: 600px;
-      margin: 0 0 200px 80px;
-      font-size: 50px;
-    }
-
-    @media screen and (max-width: 800px) {
-      width: 500px;
-      margin-left: 40px;
-      font-size: 40px;
+    @media screen and (max-width: 650px), screen and (max-height: 500px) {
+      font-size: 36px;
+      margin-right: 32px;
     }
   }
 }

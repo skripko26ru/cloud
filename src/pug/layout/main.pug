@@ -1,5 +1,7 @@
 include ../../component/header/header
 include ../../component/footer/footer
+include ../../component/head/head
+include ../../component/ball/ball
 include ./db.pug
 
 block db
@@ -8,18 +10,19 @@ doctype html
 html(lang='en')
 	head
 		meta(charset='UTF-8')
-		title Flexbox
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		meta(http-equiv='X-UA-Compatible' content='ie=edge')
+		link(rel="shortcut icon" href="favicon.png" type="image/x-icon")
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
-		block head
+
+		block head		
+			+head('Digital Cloud')
 
 	body.screen-0
 		block header
 			+header()
 		block content
 		block footer
-			+footer()
-	
+			+footer(false, true, false)
 	block bodyEnd
 

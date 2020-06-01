@@ -3,15 +3,21 @@ extends ../../layout/main.pug
 block db
 	- var navActive = 'projects';
 
+block head
+	+head(
+		'Digital Cloud - Проекты', 
+		'Мы знаем, где и как получить в сжатые сроки данные для приложений. Поэтому мы выполняем нашу работу быстрее конкурентов.',
+		'Высокое качество работ, сжатые сроки, тесный контакт с Заказчиком'
+	)
+
 block content
-	main#scroll
+	main
 		include ./_pro-vtb.pug
 		include ./_pro-psb.pug
 		include ./_pro-rshb.pug
 		include ./_pro-alpha.pug
 		include ./_pro-bks.pug
-		
-		//- include ./vtb.pug	
 
-block footer
-	+footer(true)
+
+
+

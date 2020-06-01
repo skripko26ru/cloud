@@ -3,9 +3,16 @@ extends ../../layout/main.pug
 block db
 	- var navActive = 'contacts';
 
+block head
+	+head(
+		'Digital Cloud - Контакты', 
+		'Свяжитесь с нами любым удобным для Вас способом. Можете просто оставить номер своего телефона, и мы непременно Вам перезвоним',
+		'CloudFactory, Москва, ул. Краснобогатырская, д.6, Бизнес-Центр «Вилла-Рива», офис 233 '
+	)
+
 block content
 	main.screen.screen--active
 		include ../../../component/request/request
 
 block footer
-	+footer(true)
+	+footer('', false, true)

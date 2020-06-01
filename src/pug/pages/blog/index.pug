@@ -3,54 +3,76 @@ extends ../../layout/main.pug
 block db
 	- var navActive = 'blog';
 
+block head
+	+head(
+		'Digital Cloud - Блог',
+		'Свежие новости от банковского и брокерского секторов Российской экономики',
+		'CloudFactory, ВТБ, ПСБ, Алфа-Страхование, Россельхозбанк, БКС '
+	)
+
+block header
+	+header('#F9F9FD')
+
 block content
 	main
 		.blog.container
-			.blog__title Журнал событий
+			.title.blog__title Журнал событий
+
 			.blog__container
 				.blog__item
 					.blog__item-date 15.09.2019 г.
 					.blog__item-line
 					.blog__item-text Банк ВТБ стал безусловным лидером российского рынка
-					.blog__item-further Читать далее
-					img(src= '/../assets/img/arrow-1.png' alt= 'native')
+					.blog__item-further 
+						a(href=`/blog/vtb-lider-2019.html`) Читать далее
+					a(href=`/blog/vtb-lider-2019.html`) 	
+						img(src= '/../assets/img/arrow-1.png' alt= 'native')
 
-				.blog__item.blog--margin-1
-					.blog__item-date 15.09.2019 г.
+				.blog__item.blog--mt-100
+					.blog__item-date 16.09.2019 г.
 					.blog__item-line
 					.blog__item-text Банк ВТБ стал безусловным лидером российского рынка
-					.blog__item-further Читать далее
-					img(src= '/../assets/img/arrow-1.png' alt= 'native')
+					.blog__item-further 
+						a(href=`/blog/vtb-lider-2019.html`) Читать далее
+					a(href=`/blog/vtb-lider-2019.html`) 	
+						img(src= '/../assets/img/arrow-1.png' alt= 'native')
 
 				.blog__item
-					.blog__item-date 15.09.2019 г.
+					.blog__item-date 17.09.2019 г.
 					.blog__item-line
 					.blog__item-text Банк ВТБ стал безусловным лидером российского рынка
-					.blog__item-further Читать далее
-					img(src= '/../assets/img/arrow-1.png' alt= 'native')
+					.blog__item-further 
+						a(href=`/blog/vtb-lider-2019.html`) Читать далее
+					a(href=`/blog/vtb-lider-2019.html`) 	
+						img(src= '/../assets/img/arrow-1.png' alt= 'native')
 
-				.blog__item.blog--margin-1
-					.blog__item-date 15.09.2019 г.
+				.blog__item.blog--mt-100
+					.blog__item-date 18.09.2019 г.
 					.blog__item-line
 					.blog__item-text Банк ВТБ стал безусловным лидером российского рынка
-					.blog__item-further Читать далее
-					img(src= '/../assets/img/arrow-1.png' alt= 'native')
-				
+					.blog__item-further 
+						a(href=`/blog/vtb-lider-2019.html`) Читать далее
+					a(href=`/blog/vtb-lider-2019.html`) 	
+						img(src= '/../assets/img/arrow-1.png' alt= 'native')
+
 				.blog__item
-					.blog__item-date 15.09.2019 г.
+					.blog__item-date 19.09.2019 г.
 					.blog__item-line
 					.blog__item-text Банк ВТБ стал безусловным лидером российского рынка
-					.blog__item-further Читать далее
-					img(src= '/../assets/img/arrow-1.png' alt= 'native')
+					.blog__item-further 
+						a(href=`/blog/vtb-lider-2019.html`) Читать далее
+					a(href=`/blog/vtb-lider-2019.html`) 	
+						img(src= '/../assets/img/arrow-1.png' alt= 'native')
 
-				.blog__item.blog--margin-1
-					.blog__item-date 15.09.2019 г.
+
+				.blog__item.blog--mt-100.blog--mb-150
+					.blog__item-date 20.09.2019 г.
 					.blog__item-line
 					.blog__item-text Банк ВТБ стал безусловным лидером российского рынка
-					.blog__item-further Читать далее
-					img(src= '/../assets/img/arrow-1.png' alt= 'native')
-
-
+					.blog__item-further 
+						a(href=`/blog/vtb-lider-2019.html`) Читать далее
+					a(href=`/blog/vtb-lider-2019.html`) 	
+						img(src= '/../assets/img/arrow-1.png' alt= 'native')
 
 block footer
-	+footer(true)
+	+footer('', false)

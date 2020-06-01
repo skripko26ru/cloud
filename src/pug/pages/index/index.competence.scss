@@ -1,69 +1,100 @@
-.competence{
+.competence {
+  &__title {
+    margin: 130px 0 60px 0;
+    font-family: $semiBoldFont;
+
+    @media screen and (max-width: 1300px), screen and (max-height: 770px) {
+      margin-bottom: 18px;
+    }  
+
+    @media screen and (max-width: 500px) {
+      font-size: 24px;
+    } 
+  }
+
+  &__wrap {
+    width: 1000px;
+    height: 550px;    
+  }
+
   &__item {
-    margin-bottom: 44px;
-    
+    margin-bottom: 36px;
+
+    @media screen and (max-width: 1300px), screen and (max-height: 770px) {
+      margin-bottom: 24px;
+    }    
+        
     &:last-child {
       margin-bottom: 0;
     }
 
-    &.active {
+    &.competence--active {
       margin-left: 100px;
 
-      @media screen and (max-width: 800px) {
-        margin-left: 30px;
+      @media screen and (max-width: 650px), screen and (max-height: 500px) {
+        margin-left: 0;
       }
+      
     }
   }
 
   &__header {
-    cursor: pointer;
-    position: relative;
     display: flex;
+    position: relative;
     padding-left: 60px;
+    cursor: pointer;   
 
-    .active & {
+    .competence--active & {      
       margin-bottom: 66px;
+      cursor: default;  
 
-      &::after {
+      &:after {
         display: block;
       }
     }
 
     &:after {
-      display: none;
-      content: '';
-      position: absolute;
       width: 40px;
-      left: 0;
-      bottom: -32px;
       height: 2px;
-      background-color: $MainDark;
+      display: none;
+      position: absolute;
+      bottom: -32px;
+      left: 0;
+      content: '';
+      background-color: $MainDark;      
     }
   }
 
   &__img {
     position: absolute;
-    left: 0;
     top: 50%;
+    left: 0;
     transform: translateY(-50%);
+    cursor: pointer;   
   }
 
-  &__title {
-    font-size: 20px;
-    font-weight: 600;
+  &__label {
+    font-family: $semiBoldFont;
+    font-size: 20px;    
     color: $Blue;
   }
 
   &__text {
-    display: none;
-    width: 600px;
-    font-size: 20px;
-    line-height: 170%;
+    display: none;         
+    width: 500px;
+    line-height: 170%;  
+    
+    @media screen and (max-width: 1000px) {
+      width: 400px;
+    } 
 
-    .active & {
-      display: block;
+    @media screen and (max-width: 500px) {
+      width: 300px;
+      height: 100%;     
+    } 
+
+    .competence--active & {            
+      display: block;     
     }
   }
 }
-
-

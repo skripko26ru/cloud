@@ -1,20 +1,20 @@
 -
 	var list = [	
-		{ name: 'native', title: 'Native App', text: 'Нативные приложения оптимизированы под конкретные операционные системы, такие как IOS/Android' },
-		{ name: 'prototype', title: 'Prototype', text: 'Создание интерактивных высокоточных прототипов является средством измерения эффективности дизайна' },
-		{ name: 'design', title: 'Designе', text: '«Дизайн – это не только, как предмет выглядит и ощущается. Дизайн – это то, как он работает» Стив Джобс' },
-		{ name: 'backend', title: 'Back-end', text: 'Наша команда - это опытные разработчики Php/MySQL/PostgreSQL' },
-		{ name: 'frontend', title: 'Front-end', text: 'Наша команда - это опытные разработчики Java Script/React Native/Vue/Angular/Type Script' },
-		{ name: 'middleware', title: 'MiddleWare', text: 'Комплекс технологического программного обеспечения для взаимодействия между приложениями, системами и компонентами' },
+		{ name: 'native',     label: 'Native App', text: 'Нативные приложения оптимизированы под конкретные операционные системы, такие как IOS/Android' },
+		{ name: 'prototype',  label: 'Prototype',  text: 'Создание интерактивных высокоточных прототипов является средством измерения эффективности дизайна' },
+		{ name: 'design',     label: 'Designе',    text: '«Дизайн – это не только, как предмет выглядит и ощущается. Дизайн – это то, как он работает» Стив Джобс' },
+		{ name: 'backend',    label: 'Back-end',   text: 'Наша команда - это опытные разработчики Php/MySQL/PostgreSQL' },
+		{ name: 'frontend',   label: 'Front-end',  text: 'Наша команда - это опытные разработчики Java Script/React Native/Vue/Angular/Type Script' },
+		{ name: 'middleware', label: 'MiddleWare', text: 'Комплекс технологического программного обеспечения для взаимодействия между приложениями, системами и компонентами' },
 	]
 
-.screen(data-pager="4").container
+.screen(data-pager="3").container
 	.competence 
-		.screen__title Наши компетенции 
-
-		each item in list
-			.competence__item(class= (item === list[0]? 'active' : ''))
-				.competence__header
-					img.competence__img(src= '/../assets/img/'+ item.name +'.png' alt= item.name)
-					span.competence__title= item.title
-				.competence__text= item.text
+		.title.competence__title Наши компетенции 
+		.competence__wrap
+			each item in list
+				.competence__item(class= (item === list[0]? 'competence--active' : ''))
+					.competence__header
+						img.competence__img(src= '/../assets/img/'+ item.name +'.png' alt= item.name)
+						span.competence__label= item.label
+					.competence__text= item.text

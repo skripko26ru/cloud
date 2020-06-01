@@ -1,0 +1,50 @@
+extends ../../../layout/main.pug
+include ../../../../component/header/header
+
+block db
+	- var navActive = 'projects';
+
+block header
+	+header('#112A94', 'white')
+
+block content
+	main
+		.project__ground
+			.project.container
+				.project__intro.project--color-white
+					.title.project__intro-title  ВТБ Мои инвестиции
+					.text.project__intro-text Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ и ориентировано на клиентов, самостоятельно управляющих  своими инвестициями
+					.text «Лучшее инвестиционное приложение» от РАЭК, конкурс «Золотое приложение 2018»
+
+				.project__phone
+					img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+				.project__intro
+					.title.project__intro-label  Процесс работы
+					.text.project__intro-text С момента начала сотрудничества выпущено несколько релизов приложения, внедрены самые современные сервисы, включая персонального советника.
+					.text Мобильное приложение работает  на платформе EffectiveTrade Mobile.
+
+				.project__phone.project--margin-1
+					img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+				.project__phone.project--margin-2
+					img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+				.project__intro.project--margin-3
+					.title.project__intro-label  Процесс работы
+					.text.project__intro-text С момента начала сотрудничества выпущено несколько релизов приложения, внедрены самые современные сервисы, включая персонального советника.
+
+				.project__phone.project--margin-4
+					img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+				.project__phone.project--margin-5
+					img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+				.project__intro.project--margin-6
+					.text Мобильное приложение работает  на платформе EffectiveTrade Mobile.
+
+				.project__phone.project--margin-7
+					img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+block footer
+	+footer('', false)

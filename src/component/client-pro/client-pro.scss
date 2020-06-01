@@ -1,46 +1,66 @@
-.client {
+.cli {
   display: flex;
   justify-content: space-between;
 
-  &__wrap-1 {
+  &__content {
     width: 460px;
     margin-top: 170px;
-  }
 
-  &__wrap-2 {
-    width: 560px;
-    height: 636px;
-    position: relative;
-    margin-right: 80px;
+    @media screen and (max-width: 800px) {
+      width: 300px;
+      margin-top: 100px;
+    }
 
-    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
-      width: 356px;
-      height: 452px;
-      margin: 80px 80px 0 0;
+    @media screen and (max-width: 650px) {
+      width: 430px;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 310px;
+      margin-top: 30px;
+    }
+
+    @media screen and (max-width: 350px) {
+      width: 270px;      
+    }
+
+    &-title {      
+      color: $MainDark;   
+
+      @media screen and (max-width: 450px) {      
+        font-size: 22px;
+      }
+    }
+
+    &-text {
+      line-height: 170%;
+      margin: 50px 0;
+
+      @media screen and (max-width: 450px) {
+        margin: 25px 0;        
+      }
     }
   }
 
-  &__title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 46px;
-  }
-
-  &__text {
-    line-height: 170%;
-    margin-bottom: 51px;  
-  }
-
-  &__download {
+  &__load {
     width: 200px;
     height: 32px;
     position: relative;
-    margin-left: 100px;    
+    margin-left: 100px;
+
+    @media screen and (max-width: 500px) {
+      margin: 5px 0 0 0;
+    }
 
     &-label {
       position: absolute;
       top: 2px;
       font-size: 20px;
+
+      @media screen and (max-width: 500px) {
+        font-size: 20px;
+      }
     }
 
     &-apple {
@@ -54,28 +74,56 @@
     }
   }
 
-  &__circle {
-    width: 560px;
-    height: 560px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 38px;
-
-    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
-      width: 356px;
-      height: 356px;
-      top: 24px;
-    }
-  }
-
   &__img {
-    width: 320px;
-    position: absolute;
-    left: 120px;
+    width: 560px;
+    height: 636px;
+    position: relative;
+    margin-right: 80px;
 
-    @media screen and (max-width: 1200px), screen and (max-height: 900px) {
-      width: 204px;
-      left: 76px;
+    @media screen and (max-width: 1400px), screen and (max-height: 900px) {
+      width: 356px;
+      height: 452px;        
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 250px;           
+      margin: 100px auto 0;                
+    }
+
+    &-circle {
+      width: 560px;
+      height: 560px;
+      position: absolute;
+      bottom: 38px;
+      border-radius: 50%;
+
+      @media screen and (max-width: 1400px), screen and (max-height: 900px) {
+        width: 356px;
+        height: 356px;
+        top: 24px;
+      }
+
+      @media screen and (max-width: 800px), screen and (max-height: 600px) {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    &-phone {
+      width: 320px;
+      position: absolute;
+      left: 120px;
+
+      @media screen and (max-width: 1400px), screen and (max-height: 900px) {
+        width: 204px;
+        left: 76px;
+      }
+
+      @media screen and (max-width: 800px), screen and (max-height: 600px) {
+        width: 140px;
+        left: 55px;
+        top: 10px;
+      }
     }
   }
 }

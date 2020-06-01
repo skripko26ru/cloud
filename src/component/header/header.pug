@@ -1,14 +1,20 @@
-mixin header(opts)
-	.header
-		a.header__logo(href='/') digital cloud_
-		.header__wrap
-			.container
-				.header__menu
-					each nav in navHeader
-						a.header__nav(href= nav.href class=(nav.name === navActive ? 'active' : ''))= nav.title
-			.header__phone +7 (999) 745-55-55
+mixin header(background, color, opts)
+	.header(style=`color: ${color}; background-color: ${background};`)
+		.header__logo
+			a(href='/' style=`color: ${color}`) digital cloud_
+		.header__shade-hidden
+		.container
+			.header__menu
+				each nav in navHeader
+					a.header__nav(style=`color: ${color}` href= nav.href class=(nav.name === navActive ? 'header--underline' : ''))= nav.title
+			.header__phone +7 (999) 745-55-55				
+
+		.header__nav-hidden
+			.header__menu-hidden
+				each nav in navHeader
+					a.header__nav-additional(href= nav.href class=(nav.name === navActive ? 'header--bold' : ''))= nav.title	
 
 		.header__burger
-			.header__burger-line-1
-			.header__burger-line-2
-			.header__burger-line-3
+			.header__burger-line-1(style=`background: ${color};`)
+			.header__burger-line-2(style=`background: ${color};`)
+			.header__burger-line-3(style=`background: ${color};`)

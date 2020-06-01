@@ -3,21 +3,21 @@ extends ../layout/main.pug
 block db
 	- var navActive = 'main';
 
-block content
-	main#scroll.container
+block head
+	+head(
+		'Digital Cloud - Главная',
+		'Компания CloudFactory создаёт сложные, продуманные до мелочей приложения уже более 13 лет.',
+		'CloudFactory, банковские и брокерские приложения, 13 лет на рынке '
+	)
+
+block content	
+	main.container
 		include ./index/_index.intro.pug
-		//- include ./index/_index.about.pug	
-		//- include ./index/_index.clients.pug
-		//- include ./index/_index.award.pug
-		//- include ./index/_index.competence.pug	
+		include ./index/_index.about.pug		
+		include ./index/_index.clients.pug	
+		include ./index/_index.award.pug		
+		include ./index/_index.competence.pug			
+		include ./index/_index.performance.pug							
+		include ./index/_index.request.pug			
+		+ball()
 
-		include ./performance/_performance-vtb.pug
-		//- include ./performance/_performance-bks.pug
-		//- include ./performance/_performance-psb.pug
-		//- include ./performance/_performance-rshb.pug
-		//- include ./performance/_performance-alpha.pug	
-		.screen(data-pager="5")
-			include ./../../component/request/request.pug
-
-block footer
-	+footer(true)

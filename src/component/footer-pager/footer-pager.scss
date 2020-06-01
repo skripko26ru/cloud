@@ -3,8 +3,10 @@
   justify-content: space-between;
   align-items: center;
   color: $MainDark;
+  margin-top: 40px;
 
-  &__current, &__total {
+  &__current,
+  &__total {
     font-weight: 600;
   }
 
@@ -13,19 +15,29 @@
   }
 
   &__line {
-    margin: 0 8px;
     width: 60px;
-    background-color: $GrayDecor;
     height: 2px;
+    margin: 0 8px;
+    background-color: $GrayDecor;
   }
 
   &__progress {
     width: 0%;
     height: 100%;
     background-color: $MainDark;
+
+    .screen-5 & {
+      background-color: $White;
+    }
+  }
+
+  // ====================== привязка стиля к конкретной странице ======================================
+
+  .screen-5 & a {
+    color: $White;
+  }
+
+  .screen-5 & {
+    color: $White;
   }
 }
-
-
-
-

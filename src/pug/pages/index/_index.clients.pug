@@ -1,22 +1,21 @@
 -
 	var clientList = [
-		{ name: 'АКБарс', logo: '/../assets/img/akbars.png'},
-		{ name: 'Альфа страхование', logo: '/../assets/img/alfastrah.png'},
-		{ name: 'ПромСвязьБанк', logo: '/../assets/img/psb.png'},
-		{ name: 'ВТБ', logo: '/../assets/img/vtb.png'},
-		{ name: 'УралСиб', logo: '/../assets/img/uralsib.png'},
+		{ name: 'ВТБ', logo: '/../assets/img/_icon-vtb.png'},
+		{ name: 'УралСиб', logo: '/../assets/img/_icon-ural.png'},
+		{ name: 'ПромСвязьБанк', logo: '/../assets/img/_icon-psb.png'},
+		{ name: 'Альфа страхование', logo: '/../assets/img/_icon-alp.png'},
+		{ name: 'АКБарс', logo: '/../assets/img/_icon-akb.png'},
+		//- { name: 'Россельхозбанк', logo: '/../assets/img/rshb.png'},				
 	]
 
-.client.screen(data-pager="4").pusk
+.clients.screen(data-pager="2").pusk
 	.container
-		.screen__title Наши клиенты
-		.screen__text Мы помогаем крупному и среднему бизнесу разрабатывать новые digital–продукты
-		//- .client__list
-		//- 	each item in clientList
-		//- 		img.client__item(src= item.logo alt= item.name)
-		.video#video
+		.title Наши клиенты
+		.text.clients__text Мы помогаем крупному и среднему бизнесу разрабатывать новые digital–продукты
+		.clients__list
 			each item in clientList
-				img.client__item(src= item.logo alt= item.name)
+				.clients__item
+					img(src= item.logo alt= item.name)
 
 
-
+// для движения блока добавить к .clients__list идентификатор #move

@@ -1,17 +1,10 @@
--
-	var awardList = [
-		{ img: '/../assets/img/gold.png', name: 'gold', title: '1 место', text: 'В номинации «Лучшее инвестиционное приложение»'},
-		{ img: '/../assets/img/finaward.png', name: 'finaward', title: '2 место', text: 'В номинации «Инвестиционный продукт или сервис»'},
-		{ img: '/../assets/img/banki.png', name: 'banki', title: 'Top 2', text: 'В рейтиге мобильных приложений для инвестиций'},
-		{ img: '/../assets/img/appstore.png', name: 'appstore', title: 'Top 25', text: 'В категории «Финансы» в App Store'},
-	]
-
-.award.screen(data-pager="2")
+.awards.screen(data-pager="2")
 	.container
-		.award__reward Наши награды
-		.award__list
-			each item in awardList
-				.award__item
-					img.award__img(src=item.img alt=item.name)
-					.award__title= item.title
-					.award__text= item.text
+		.title.awards__title Наши награды
+		.awards__list
+		.awards__vertical
+			.awards__item-1
+			.awards__item-2
+			.awards__item-3
+			.awards__item-4
+

@@ -3,35 +3,44 @@ let isAnimating = false;
 const screenSwitchTime = 1000;
 const screenActiveClass = "screen--active";
 
-const $main = $("#scroll");
 const $body = $("body");
 const $screenList = $(".screen");
 
 setPagerPage();
-$main.bind("mousewheel", function (e) {
-  if (isAnimating) return;
-  const pagePrev = screenActive;
-  if (!setScreenActive(e.originalEvent.wheelDelta / 120 > 0 ? -1 : 1)) return;
 
+$(window).on('mousewheel', function (e) {
+  const direction = e.originalEvent.wheelDelta / 120 > 0 ? -1 : 1;
+  moveScreen(direction);
+});
+
+$(window).touchwipe({
+	wipeUp() { moveScreen(-1); },
+	wipeDown() { moveScreen(1); },
+	min_move_y: 40,
+	preventDefaultEvents: false
+});
+
+function moveScreen(direction) {
+  if (isAnimating) return;
+  const nextScreen = screenActive + direction;
+  setScreenActive(nextScreen);
+}
+
+function setScreenActive(index) {
+  if (isAnimating || index < 0 || index > $screenList.length - 1) return;
+  const pagePrev = screenActive;
   isAnimating = true;
+  const $active = $(`.${screenActiveClass}`);
+
+  $active.removeClass(screenActiveClass);
+  $($screenList.get(index)).addClass(screenActiveClass);
+  screenActive = index;
   $body.addClass(`screen-${screenActive}`).removeClass(`screen-${pagePrev}`);
-  setPagerPage();
   setTimeout(() => {
     isAnimating = false;
   }, screenSwitchTime);
-});
 
-function setScreenActive(direction) {
-  if (
-    (direction < 0 && screenActive === 0) ||
-    (direction > 0 && screenActive === $screenList.length - 1)
-  )
-    return false;
-  const $active = $(`.${screenActiveClass}`);
-  $active.removeClass(screenActiveClass);
-  $active[direction > 0 ? "next" : "prev"]().addClass(screenActiveClass);
-  screenActive += direction > 0 ? 1 : -1;
-  return true;
+  setPagerPage();
 }
 
 function setPagerPage() {
@@ -40,3 +49,9 @@ function setPagerPage() {
   $(".footer-pager__current").html(page < 10 ? "0" + page : page);
   $(".footer-pager__progress").css({ width: `${(page / total) * 100}%` });
 }
+
+$('.js-to-screen').click(function () {
+  const $this = $(this);
+  setScreenActive($screenList.index($('#' + $this.data('screen'))));
+});
+

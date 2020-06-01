@@ -1,11 +1,33 @@
 include ../footer-pager/footer-pager
 
-mixin footer(pager)
-  .footer
-    if pager
-      +footerPager(5)
-    .footer__menu
-      each item in navFooter
-        a.footer__nav(href= item.href)= item.title
+mixin footer(background, pager, write) 
+	.footer(style=`background-color: ${background}`)
+		if pager		
+			.footer__pager
+				+footerPager(5)
+			.footer__menu
+				each item in navFooter
+					a.footer__nav(href= item.href)= item.title
+			.footer__hidden
+				each item in requestFooter
+					a.footer__nav(href= item.href)= item.title		
+
+		else if write
+			.footer__pager-hidden
+				+footerPager(5)
+			.footer__menu
+				each item in writeUs
+					a.footer__nav(href= item.href)= item.title				
+
+		else	
+			.footer__pager-hidden
+				+footerPager(5)
+			.footer__menu
+				each item in navFooter
+					a.footer__nav(href= item.href)= item.title		
+
+
+
+
 
 

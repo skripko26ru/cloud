@@ -9,10 +9,22 @@ block maindb
 
   -
     var navFooter = [
-      { name: 'policy', title: 'Политика конфиденциальности', href: '/policy'},
-      { title: 'Напишите нам', href: '/#writeus'},
+      { title: 'Напишите нам', href: '/contacts'},
       { name: 'blog', title: 'Блог', href: '/blog'},
     ]
 
   -
+    var writeUs = [ 
+      { name: 'blog', title: 'Блог', href: '/blog'},
+    ]
+
+  -
+    var requestFooter = [
+      { name: 'policy', title: 'Политика конфиденциальности', href: '/policy'},   
+      { name: 'blog', title: 'Блог', href: '/blog'},       
+    ]  
+
+  -
     var navList = [{ name: 'main', href: '/' }, ...navHeader, ...navFooter.filter(nav => nav.name)];
+
+  

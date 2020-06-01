@@ -3,19 +3,38 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  & a {
+    color: $Blue !important;
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 850px;   
-    // background: rgb(219, 179, 179);
+    width: 850px;
+
+    @media screen and (max-width: 1000px), screen and (max-height: 600px) {
+      width: 750px;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 400px;
+    }
   }
 
   &__title {
     width: 100%;
     margin: 294px 0 124px 0;
-    font-size: 32px;
-    font-weight: 700;
+
+    @media screen and (max-width: 900px) {
+      margin: 120px 0 60px;
+    }
   }
 
   &__item {
@@ -23,14 +42,28 @@
     height: 314px;
     position: relative;
     margin: 44px 0;
-    background: $White;
+    background: $White;   
+
+    @media screen and (max-width: 1000px), screen and (max-height: 600px) {
+      width: 330px;
+      height: 260px;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin: 10px 0;
+    }
 
     &-date {
       position: absolute;
       top: 60px;
       left: 60px;
+      font-family: $semiBoldFont;
       font-size: 20px;
-      font-weight: 600;
+
+      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
+        top: 30px;
+        left: 30px;
+      }
     }
 
     &-line {
@@ -40,6 +73,11 @@
       width: 40px;
       height: 2px;
       background: $MainDark;
+
+      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
+        top: 80px;
+        left: 30px;
+      }
     }
 
     &-text {
@@ -48,6 +86,11 @@
       top: 146px;
       left: 60px;
       line-height: 170%;
+
+      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
+        top: 110px;
+        left: 30px;
+      }
     }
 
     &-further {
@@ -55,21 +98,36 @@
       top: 247px;
       left: 60px;
       line-height: 170%;
-      color: #3a67ff;
+      color: $Blue;
+
+      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
+        top: 200px;
+        left: 30px;
+      }
     }
 
     & img {
       position: absolute;
       top: 258px;
       left: 190px;
+
+      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
+        top: 210px;
+        left: 160px;
+      }
     }
   }
-  
-  &--margin-1 {
-    // margin-top: 100px;
+
+  &--mt-100 {
     position: relative;
-    top: 100px
+    top: 100px;
+
+    @media screen and (max-width: 1000px), screen and (max-height: 600px) {
+      top: 0;
+    }
+  }
+
+  &--mb-150 {    
+    margin-bottom: 150px;
   }
 }
-
-// @media screen and (max-width: 1400px) {}
