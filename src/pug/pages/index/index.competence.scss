@@ -1,4 +1,40 @@
 .competence {
+  @media screen and (max-width: 640px) {
+    margin: 0 10%;
+  } 
+
+  // iPhone 6/7/8
+  @media screen and (device-aspect-ratio: 375/667) {
+    margin-top: 400px;    
+    margin-bottom: 200px;    
+  }
+
+  // iPhone X
+  @media screen and (device-aspect-ratio: 375/812) {
+    margin-top: 270px;
+  }
+
+  // Pixel 2
+  @media screen and (device-aspect-ratio: 411/731) {
+    margin-top: 350px;
+  }
+
+  // Pixel 2XL
+  @media screen and (device-aspect-ratio: 411/823) {
+    margin-top: 260px;
+  }
+
+  // iPhone 6/7/8 Plus
+  @media screen and (device-aspect-ratio: 414/736) {
+    margin-top: 350px;
+  }
+
+
+  @media screen and (max-width: 360px){
+    margin-top: 450px;
+  }
+
+
   &__title {
     margin: 130px 0 60px 0;
     font-family: $semiBoldFont;
@@ -7,8 +43,9 @@
       margin-bottom: 18px;
     }  
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 600px) {
       font-size: 24px;
+      margin-bottom: 32px;
     } 
   }
 
@@ -26,6 +63,10 @@
         
     &:last-child {
       margin-bottom: 0;
+
+      @media screen and (max-width: 480px) {
+        margin-bottom: 100px;
+      }
     }
 
     &.competence--active {
@@ -77,6 +118,7 @@
     font-family: $semiBoldFont;
     font-size: 20px;    
     color: $Blue;
+    cursor: pointer;
   }
 
   &__text {

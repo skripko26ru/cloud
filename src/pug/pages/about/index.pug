@@ -16,7 +16,7 @@ block head
 		'Специалисты CloudFactory создали линейку собственных программных продуктов.',
 		'CloudFactory, банковские и брокерские приложения'
 	)
-	
+
 block header
 	+header('#F9F9FD')
 
@@ -28,22 +28,22 @@ block content
 				.about__intro
 					.about__intro-icon
 						img(src= `/../assets/img/${item.name}.png` alt= item.name)
-					.text= item.text
+					.text.about__intro-text= item.text
 
 			.about__block-1.about--mt-150
-				.text  
+				.text.about__block-1-text  
 					span.about__block-1-title  «EffectiveTrade Mobile»
 					|  — это удобная архитектура, состоящая из собственных решений СloudFactory и разворачивающихся  на стороне заказчика. 
 
 			.about__block-1
 				.about__block-1-title  Состоит из модулей:
-				.text  
+				.text.about__block-1-text  
 					span.about--blue Effectevetrade DataHub
 					|  — API в виде REST сервиса.
-				.text  	
+				.text.about__block-1-text   	
 					span.about--blue Effectevetrade Trading
 					|  — решение, предназначенное для выставления заявок и связанных с этим бизнес-процессов.
-				.text  	
+				.text.about__block-1-text    	
 					span.about--blue Effectevetrade Position keeping
 					|  — аналитическая база данных.
 

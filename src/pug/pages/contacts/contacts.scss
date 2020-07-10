@@ -1,0 +1,174 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 100px;
+  }
+
+  @media screen and (max-width: 1500px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @media screen and (max-width: 480px) {
+      margin: 0 10%;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    @media screen and (max-width: 1700px) {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      margin: 0 auto;
+    }
+  }
+
+  // ============================== контент справа ==============================
+
+  &__map {
+    width: 700px;
+    height: 360px;
+    margin-left: -150px;
+
+    @media screen and (max-width: 1800px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 1500px) {
+      margin: 0;
+    }
+
+    @media screen and (max-width: 1100px) {
+      height: 300px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 80%;
+      height: 200px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 80%;
+      margin: 0 10%;
+    }
+  }
+
+  &__pointer {
+    position: absolute;
+    bottom: 80px;
+    right: 1320px;
+
+    @media screen and (max-width: 1400px) {
+      right: 940px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      right: 0;
+      bottom: 120px;
+      left: 30px;
+    }
+
+    @media screen and (max-width: 650px) {
+      bottom: 130px;
+    }
+
+    @media screen and (max-width: 480px) {
+      bottom: 90px;
+    }
+  }
+
+  &__address {
+    position: absolute;
+    bottom: 80px;
+    right: 670px;
+
+    @media screen and (max-width: 1400px) {
+      right: 380px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      right: 0;
+      bottom: 120px;
+      left: 70px;
+      margin-right: 50px;
+    }
+
+    @media screen and (max-width: 480px) {
+      bottom: 80px;
+    }
+  }
+
+  &__envelope {
+    position: absolute;
+    bottom: 80px;
+    right: 550px;
+
+    @media screen and (max-width: 1400px) {
+      right: 320px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      left: 30px;
+    }
+
+    @media screen and (max-width: 480px) {
+      bottom: 50px;
+    }
+  }
+
+  &__email {
+    position: absolute;
+    bottom: 80px;
+    right: 340px;
+
+    @media screen and (max-width: 1400px) {
+      right: 140px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      left: 70px;
+    }
+
+    @media screen and (max-width: 480px) {
+      bottom: 50px;
+    }
+  }
+
+  &__info {
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @media screen and (max-width: 480px) {
+      margin-top: 24px;
+      display: block;
+    }
+
+    & p {
+      margin: 0 10% 24px;
+    }
+  }
+}

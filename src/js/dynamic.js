@@ -33,33 +33,33 @@ $competenseList.on('click', function (e) {
 
 // ================== переключение между разноцветными страницами с телефонами на кругах ================
 
-const $performanceList = $('.performance__title');
+const $showingList = $('.showing__title');
 
-const $wrap = $('.performance__wrap');
-const $image = $('.performance__image');
+const $wrap = $('.showing__wrap');
+const $image = $('.showing__image');
 const $header = $('.header__logo a, .header__nav, .header__phone, .footer__nav, .footer-pager');
 const $footer = $('.footer-pager__progress');
 const $lines = $('.header__burger-line-1, .header__burger-line-2, .header__burger-line-3');
 
-const $vtbBg = 'performance__vtb-bg';
-const $bksBg = 'performance__bks-bg';
-const $psbBg = 'performance__psb-bg';
-const $rshBg = 'performance__rsh-bg';
-const $alpBg = 'performance__alp-bg';
+const $vtbBg = 'showing__vtb-bg';
+const $bksBg = 'showing__bks-bg';
+const $psbBg = 'showing__psb-bg';
+const $rshBg = 'showing__rsh-bg';
+const $alpBg = 'showing__alp-bg';
 const $clientsBg = [$vtbBg, $bksBg, $psbBg, $rshBg, $alpBg];
 
-const $vtbImg = 'performance__vtb-img';
-const $bksImg = 'performance__bks-img';
-const $psbImg = 'performance__psb-img';
-const $rshImg = 'performance__rsh-img';
-const $alpImg = 'performance__alp-img';
+const $vtbImg = 'showing__vtb-img';
+const $bksImg = 'showing__bks-img';
+const $psbImg = 'showing__psb-img';
+const $rshImg = 'showing__rsh-img';
+const $alpImg = 'showing__alp-img';
 const $clientsImg = [$vtbImg, $bksImg, $psbImg, $rshImg, $alpImg];
 
-$performanceList.on('click', function (e) {
+$showingList.on('click', function (e) {
   const $this = $(this);
-  const $item = $this.closest('.performance__item');
-  const $hasActive = $item.hasClass('performance--active');
-  const $active = $('.performance--active');
+  const $item = $this.closest('.showing__item');
+  const $hasActive = $item.hasClass('showing--active');
+  const $active = $('.showing--active');
   const $id = $item.attr('id');
 
   function perf(bg, img) {
@@ -78,8 +78,8 @@ $performanceList.on('click', function (e) {
   }
 
   if (!$hasActive) {
-    $active.removeClass('performance--active');
-    $item.addClass('performance--active');
+    $active.removeClass('showing--active');
+    $item.addClass('showing--active');
   }
 
   if ($id === 'vtb') perf($vtbBg, $vtbImg);
@@ -97,17 +97,11 @@ const header = document.querySelector('.header');
 window.addEventListener("scroll", function () {
   const offset = window.pageYOffset;
 
-  if (offset > 600) {  
+  if (offset > 600) {
     header.classList.add("header__colors");
   }
 
-  else {  
+  else {
     header.classList.remove("header__colors");
   }
 });
-
-
-
-
-
-

@@ -1,0 +1,170 @@
+.projects {
+  max-width: 66.67%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 900px) {
+    max-width: 80%;
+  }
+
+  &__ground {
+    width: 100%;
+    height: 730px;
+    background-color: $BlueDark;
+
+    @media screen and (max-width: 900px) {
+      height: 630px;
+    }
+  }
+
+  &__text {
+    margin: 45px 0;
+  }
+
+  // ========== 1 блок (вверху на синем фоне: контент - слева / телефон - справа) ==========
+
+  &__block-1 {
+    display: flex;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+
+  &__content-1 {
+    width: 50%;
+    height: 100%;
+    padding-right: 8%;
+    margin-top: 250px;
+
+    @media screen and (max-width: 1600px) {
+      margin-top: 200px;
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: 1100px) {
+      margin-top: 150px;
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
+  }
+
+  &__phone-1 {
+    width: 50%;
+    margin-top: 180px;
+    padding-left: 10%;
+
+    @media screen and (max-width: 1100px) {
+      margin-top: 120px;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      padding-left: 0;
+      margin: 80px auto 0;
+    }
+  }
+
+  // ============================== контент между блоками  ==============================
+
+  &__content-2 {
+    @extend .projects__content-1;
+    width: 50%;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin: 30px 0;
+    }
+  }
+
+  &__content-3 {
+    @extend .projects__content-2;
+    margin-left: 25%;
+
+    @media screen and (max-width: 900px) {
+      margin: 0 0 50px;
+    }
+  }
+
+  // ============================== 2 блок (где по 2 телефона)  ==============================
+
+  &__block-2 {
+    display: flex;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+
+  &__phone-2 {
+    margin: 200px 100px 0 320px;
+
+    @media screen and (max-width: 1700px) {
+      margin: 150px 50px 0 200px;
+    }
+
+    @media screen and (max-width: 1300px) {
+      margin: 100px 50px 0 100px;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin: 30px auto;
+    }
+  }
+
+  &__phone-3 {
+    margin-top: 30px;
+
+    @media screen and (max-width: 900px) {
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__phone-4 {
+    margin: 100px 100px 0 320px;
+
+    @media screen and (max-width: 1700px) {
+      margin: 100px 50px 0 200px;
+    }
+
+    @media screen and (max-width: 1300px) {
+      margin: 50px 50px 0 100px;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin: 30px auto;
+    }
+  }
+
+  &__phone-5 {
+    margin-top: 100px;
+
+    @media screen and (max-width: 1300px) {
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__phone-6 {
+    margin: 200px 100px 50px 320px;
+
+    @media screen and (max-width: 1700px) {
+      width: 40%;
+      margin: 150px 50px 50px 200px;
+    }
+
+    @media screen and (max-width: 1300px) {
+      margin: 100px 50px 50px 100px;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin: 30px auto;
+      width: 100%;
+    }
+  }
+}

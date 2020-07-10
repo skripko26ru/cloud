@@ -1,0 +1,45 @@
+.banner {
+  background-image: url(../img/background.png); 
+  background-size: cover;
+
+  &__label {
+    position: relative;
+    margin-bottom: 16px;
+    padding-left: 52px;
+    font-family: $mediumFont;
+    font-size: 24px;    
+    line-height: 170%;    
+
+    @media screen and (max-width: 600px) {
+      margin-left: 5%;
+    }
+
+    &:before {
+      content: '';
+      width: 40px;
+      height: 2px;
+      position: absolute;
+      top: 55%;
+      left: 0;
+      background: $MainDark;
+
+      @media screen and (max-width: 600px) {
+        width: 17px;
+        height: 1px;  
+        left: 20px;     
+      }
+    }
+  }
+
+  &__title {
+    max-width: 750px;
+    font-family: $extraBoldFont;
+    font-size: 60px;    
+    line-height: 130%;
+
+    @media screen and (max-width: 600px) {
+      font-size: 36px;
+      margin: 0 10%;
+    }
+  }
+}

@@ -13,7 +13,6 @@ html(lang='en')
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		meta(http-equiv='X-UA-Compatible' content='ie=edge')
 		link(rel="shortcut icon" href="favicon.png" type="image/x-icon")
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
 
 		block head		
 			+head('Digital Cloud')
@@ -21,8 +20,12 @@ html(lang='en')
 	body.screen-0
 		block header
 			+header()
-		block content
+		block content		
 		block footer
 			+footer(false, true, false)
+		//- +ball()
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+		script(src="https://unpkg.com/imask")
+		script(src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript")
 	block bodyEnd
 

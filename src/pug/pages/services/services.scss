@@ -16,9 +16,9 @@
       font-size: 26px;
     }
 
-    @media screen and (max-width: 480px) {
-      margin: 100px 0 30px;
-      font-size: 26px;
+    @media screen and (max-width: 640px) {
+      margin: 100px 0 30px 10%;
+      font-size: 24px;
     }
   }
 
@@ -44,7 +44,7 @@
       padding: 0 40px;
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 640px) {
       display: none;
     }
 
@@ -94,8 +94,32 @@
   &__hidden {
     display: none;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 640px) {
+      width: 100%;
       display: block;
+    }
+
+    @media screen and (max-width: 480px) {
+      margin: -250px 0 -80px;
+    }
+
+    @media screen and (max-width: 360px) {
+      margin: -430px 0 -80px;
+    }
+
+    // Pixel 2
+    @media screen and (device-aspect-ratio: 411/731) {
+      margin-top: -340px;
+    }
+
+    // iPhone 6/7/8
+    @media screen and (device-aspect-ratio: 375/667) {
+      margin: -360px 0 -280px;
+    }
+
+    // iPhone 6/7/8 Plus
+    @media screen and (device-aspect-ratio: 414/736) {
+      margin-top: -330px;
     }
   }
 
@@ -103,9 +127,9 @@
     max-width: 800px;
     margin: 0 80px 240px 0;
 
-    @media screen and (max-width: 650px), screen and (max-height: 500px) {
-      width: 350px;
-      margin-bottom: 30px;
+    @media screen and (max-width: 640px) {
+      width: 80%;
+      margin: 0 10% 30px;
     }
 
     @media screen and (max-width: 400px) {

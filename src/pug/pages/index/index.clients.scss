@@ -1,22 +1,51 @@
 .clients {
-  &__text {
-    width: 520px;
-    margin: 30px 0 160px 0;
+  // iPhone 6/7/8
+  @media screen and (device-aspect-ratio: 375/667) {
+    margin-top: 730px;
+  }
 
-    @media screen and (max-width: 650px), screen and (max-height: 500px) {
-      width: 400px;
-      margin: 20px 0;
+  // iPhone X
+  @media screen and (device-aspect-ratio: 375/812) {
+    margin-top: 500px;
+  }
+
+  // Pixel 2
+  @media screen and (device-aspect-ratio: 411/731) {
+    margin-top: 630px;
+  }
+
+  // Pixel 2XL
+  @media screen and (device-aspect-ratio: 411/823) {
+    margin-top: 500px;
+  }
+
+  // iPhone 6/7/8 Plus
+  @media screen and (device-aspect-ratio: 414/736) {
+    margin-top: 630px;
+  }
+
+  &__title {
+    @media screen and (max-width: 600px) {
+      margin: 0 0 32px 10%;
     }
 
-    @media screen and (max-width: 500px) {
-      width: 340px;
-      font-size: 18px;
-      margin-right: 32px;
-    } 
+    @media screen and (max-width: 320px) {
+      font-size: 22px;
+      margin-top: 180px;
+    }
+  }
 
-    @media screen and (max-width: 360px) {
-      max-width: 300px;
-      margin: 10px 0;
+  &__text {
+    width: 520px;
+    margin: 30px 0 160px;
+
+    @media screen and (max-width: 600px) {
+      width: 70%;
+      margin: 0 10% 56px 10%;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 14px;
     }
   }
 
@@ -26,31 +55,32 @@
     width: 1500px;
     height: 60px;
 
-    @media screen and (max-width: 650px), screen and (max-height: 500px) {
-      max-width: 470px;
-      height: 100%;
+    @media screen and (max-width: 600px) {
       flex-wrap: wrap;
-      justify-content: flex-start;
-    } 
-
-    @media screen and (max-width: 500px) {
-      max-width: 350px;
+      width: 100%;
+      margin-left: 10%;
     }
   }
 
   &__item {
     margin: 0 34px;
 
-    @media screen and (max-width: 650px), screen and (max-height: 500px) {
-      margin: 5px 15px;
-    }
-
-    @media screen and (max-width: 500px) {
-      margin: 10px 50px 10px 0;
+    @media screen and (max-width: 600px) {
+      display: none;
     }
 
     &:first-child {
       margin-left: 0;
+    }
+  }
+
+  &__hidden {
+    @extend .clients__item;
+    display: none;
+
+    @media screen and (max-width: 600px) {
+      display: block;
+      margin: 10px 50px 30px 0;
     }
   }
 }

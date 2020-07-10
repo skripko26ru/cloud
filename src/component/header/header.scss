@@ -6,14 +6,17 @@
   right: 0;
   left: 0;
   width: 100%;
-  height: 140px;
-  padding-top: 80px;
+  height: 140px; 
   z-index: 2;
   color: $MainDark;
 
-  @media screen and (max-width: 1000px), screen and (max-height: 700px) {
-    padding-top: 30px;
+  @media screen and (max-width: 1100px), screen and (max-height: 700px) {    
     height: 90px;
+  }
+
+  @media screen and (max-width: 480px) {  
+    height: 70px;  
+    background-color: $BG;
   }
 
   & a {
@@ -31,12 +34,13 @@
 
   &__logo {
     position: absolute;
+    top: 80px;
     left: 80px;
     font-size: 18px;
     font-weight: 700;
     font-family: $secondFont;
 
-    @media screen and (max-width: 500px), screen and (max-height: 600px) {
+    @media screen and (max-width: 1100px), screen and (max-height: 600px) {
       top: 24px;
       left: 40px;
     }
@@ -51,7 +55,7 @@
     top: 80px;
     right: 80px;
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1150px) {
       display: none;
     }
   }
@@ -59,7 +63,12 @@
   // ========================= основная навигация ================================
 
   &__menu {
+    margin-top: 80px;
     display: flex;
+
+    @media screen and (max-width: 1400px){
+      margin-top: 70px;
+    }
 
     @media screen and (max-width: 1100px), screen and (max-height: 700px) {
       display: none;
@@ -79,7 +88,7 @@
     }
   }
 
-  // ===================  скрытая навигация (под "гамбургером") ==========================
+  // ===================  скрытая под "гамбургером" навигация ==========================
 
   &__menu-hidden {
     display: none;
@@ -92,7 +101,14 @@
       cursor: pointer;
 
       @media screen and (max-width: 650px), screen and (max-height: 500px) {
-        text-align: start;
+        text-align: center;
+        margin-top: 50px; 
+                 
+      }
+
+      @media screen and (max-width: 500px), screen and (max-height: 600px) {
+        top: 24px;
+        left: 40px;
       }
     }
   }
@@ -104,14 +120,14 @@
     font-weight: 700;
     color: $GrayDecor !important;
 
-    @media screen and (max-width: 650px), screen and (max-height: 600px) {
+    @media screen and (max-width: 640px) {
       margin-bottom: 0;
     }
 
     &:first-child {
       margin-top: 150px;
 
-      @media screen and (max-width: 650px) {
+      @media screen and (max-width: 640px) {
         margin-top: 30px;
       }
     }
@@ -132,6 +148,7 @@
 
     @media screen and (max-width: 1100px) {
       display: block;
+      top: 24px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -232,6 +249,12 @@
 
       @media screen and (max-width: 650px) {
         width: 650px;
+        transform: translateX(0);
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 480px;
+        height: 500px;
         transform: translateX(0);
       }
     }

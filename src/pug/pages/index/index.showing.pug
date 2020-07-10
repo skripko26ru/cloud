@@ -34,17 +34,17 @@
 	]	
 
 .screen(data-pager="4")
-	.performance__wrap.performance__vtb-bg
+	.showing__wrap.showing__vtb-bg
 		.container
-			.performance
-				.performance__content
+			.showing
+				.showing__content
 					each item in list				
-						.performance__item(id= item.id, class= (item === list[0]? 'performance--active' : ''))
-							.performance__title= item.title
-							.performance__text= item.text
+						.showing__item(id= item.id, class= (item === list[0]? 'showing--active' : ''))
+							.showing__title= item.title
+							.showing__text= item.text
 							if item.more
-								.performance__detail
-									.performance__dash(style=`background-color: ${item.dash}`)
-									.performance__label 
+								.showing__detail
+									.showing__dash(style=`background-color: ${item.dash}`)
+									.showing__label 
 										a(href=`/projects/${item.id}`) Подробнее о проекте
-				.performance__image.performance__vtb-img
+				.showing__image.showing__vtb-img

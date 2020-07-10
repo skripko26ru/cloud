@@ -1,21 +1,21 @@
 -
-	var createList = [
+	var introList = [
 		{ header: 'Экспертиза', content: 'Разработали мобильные приложения и web-сервисы для лидеров российского финансового сектора' },
 		{ header: 'Гибкость', content: 'Наши программные решения позволяют создавать гибкие модульные системы, которые легко поддерживать' },
 		{ header: 'Аналитика',  content: 'Определяем поведенческие характеристики пользователей при помощи собственных аналитических модулей' },
 	]
 
-.create.screen(data-pager="2")
+.intro.screen(data-pager="2")
 	.container
-		.title.create__title Работаем с 2007 года
-		.text.create__text
+		.title.intro__title Работаем с 2007 года
+		.text.intro__text
 			| Делаем мобильные приложения, проектируем личные кабинеты, трейдинговые сервисы и информационные системы.
 			| Используем современные инструменты разработки и проектирования пользовательского интерфейса
-		.create__list
-			each item in createList
-				.create__item
-					.create__header= item.header
-					.create__content= item.content
+		.intro__list
+			each item in introList
+				.intro__item
+					.intro__header= item.header
+					.intro__content= item.content
 
 
 

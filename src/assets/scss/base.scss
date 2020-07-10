@@ -3,6 +3,10 @@ html {
   font-size: $mainFontSize;
   line-height: $mainLineHeight;
   color: $MainDark;
+
+  @media screen and (max-width: 600px) {
+    overflow-x: hidden;
+  }
 }
 
 body {
@@ -14,49 +18,43 @@ body {
   background-color: $BG;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (max-width: 600px) {
+    overflow-x: hidden;
+  }
 }
 
 .container {
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto 0 400px;
+  margin: 0 16.67%;
 
-  @media screen and (max-width: 1600px), screen and (max-height: 900px) {
-    margin-left: 330px;
-  }
-
-  @media screen and (max-width: 1300px), screen and (max-height: 750px) {
-    margin-left: 230px;
-  }
-
-  @media screen and (max-width: 1100px) {
-    margin-left: 80px;
-  }
-
-  @media screen and (max-width: 500px) {
-    margin-left: 40px;
-  }
-
-  @media screen and (max-width: 350px) {
-    left: 25px;
+  @media screen and (max-width: 640px) {    
+    margin: 0;
   }
 }
 
 .screen {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   position: fixed;
   left: 0;
   top: 0;
-  opacity: 0;
+  width: 100vw;
+  height: 100vh;
   transition: opacity 0.5s linear;
+  opacity: 0;
   align-items: center;
 
   &--active {
     opacity: 1;
-    z-index: 1;
+    z-index: 1;       
+  }
+
+  @media screen and (max-width: 600px) {
+    position: static;
+    transition: none;
+    opacity: 1;
   }
 
   & > .container {
@@ -70,18 +68,14 @@ body {
 }
 
 .title {
-  font-family: $boldFont; 
-  font-size: 32px; 
+  font-family: $boldFont;
+  font-size: 32px;
   line-height: 100%;
 }
 
 .text {
   font-size: 20px;
   line-height: 170%;
-
-  @media screen and (max-width: 500px) {
-    font-size: 16px;
-  }
 }
 
 .ball {
@@ -92,17 +86,21 @@ body {
   position: absolute;
   transition: top 0.5s, left 0.5s;
   -webkit-transition: top 0.5s, left 0.5s;
-  transition: all .5s ease;
-  z-index: 1;
+  transition: all 0.5s ease;
+  z-index: 0;
 }
 
 .bigball {
-  @extend .ball;  
-  
+  @extend .ball;
+
   width: 50px;
   height: 50px;
   background-color: rgba(179, 157, 157, 0.1);
-  border: 1px solid rgba(179, 157, 157, 1) ;  
-  margin: -15px 0 0 -15px;  
-  z-index: 1;
+  border: 1px solid rgba(179, 157, 157, 1);
+  margin: -15px 0 0 -15px;
+  z-index: 0;
+}
+
+.white {
+  color: $White;
 }

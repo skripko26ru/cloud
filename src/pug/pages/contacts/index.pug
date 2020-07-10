@@ -12,7 +12,39 @@ block head
 
 block content
 	main.screen.screen--active
-		include ../../../component/request/request
+		.container
+			.contacts
+				.title.contacts__title Давайте обсудим Ваш проект
+				.contacts__wrap
+					form.discussion__form.contacts__form
+						img.discussion__icon(src='/../assets/img/tube.png' alt='phone icon')
+						input.discussion__input(type='text' name='phonenumber' placeholder='Введите номер телефона')
+						.discussion__line 
+							.discussion__result
+						.discussion__notice Нажимая на «Отправить заявку», вы даёте согласие на обработку персональных данных					
+						input.discussion__submit(type="submit" value="Отправить")
+
+					.contacts__map#map
+				.contacts__info
+					.contacts__pointer
+						img(src='/../assets/img/pointer.png' alt='')
+					.contacts__address Москва, ул. Краснобогатырская, д.6, Бизнес-Центр «Вилла-Рива», офис 233
+					.contacts__envelope
+						img(src='/../assets/img/email.png' alt='')
+					.contacts__email info@digitalcloud.com
+
+				.contacts__mobile
+					p Москва, ул. Краснобогатырская, д.6, Бизнес-Центр «Вилла-Рива», офис 233		
+					p +7 (999) 745-55-55							
+					p info@digitalcloud.com
 
 block footer
 	+footer('', false, true)
+
+
+
+
+
+
+
+

@@ -11,6 +11,10 @@
   padding: 0 80px 80px;
   z-index: 2;
 
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+
   @media screen and (max-width: 600px), screen and (max-height: 700px) {
     padding: 0 0 40px;
   }
@@ -19,9 +23,9 @@
   }
 
   &__menu {
-    align-self: flex-end;
-
-    @media screen and (max-width: 650px), screen and (max-height: 500px) {
+    align-self: flex-end;   
+ 
+    @media screen and (max-width: 1100px), screen and (max-height: 700px) {
       display: none;
     }
 
@@ -32,12 +36,20 @@
 
   &__hidden {
     display: none;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
     
     .screen-6 & {
       display: block;
       color: $MainDark;
       margin-top: 45px;
       text-align: end;
+
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
     }
   }
 

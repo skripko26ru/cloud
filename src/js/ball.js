@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener("mousemove", function (e) {
-    X = e.clientX - 5;
-    Y = e.clientY - 5;
+    X = e.pageX - 5;
+    Y = e.pageY - 5;
   }, false);
 
   setInterval(move, 100);
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ==================== шарик увеличивается над ссылкой  ====================================
 
-let $headers = $('a');
+let $headers = $('a, .competence__label, .competence__img');
 let $ball = $('.ball');
 
 $headers.mousemove(function (e) {
