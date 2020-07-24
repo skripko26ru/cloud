@@ -11,10 +11,10 @@ mixin header(background, color, opts)
 
 		.header__nav-hidden
 			.header__menu-hidden
-				each nav in navHeader
+				each nav in navList
 					a.header__nav-additional(href= nav.href class=(nav.name === navActive ? 'header--bold' : ''))= nav.title	
 
 		.header__burger
-			.header__burger-line-1(style=`background: ${color};`)
-			.header__burger-line-2(style=`background: ${color};`)
-			.header__burger-line-3(style=`background: ${color};`)
+			.header__burger-line-1(style=`background-color: ${color};`)
+			.header__burger-line-2(style=`background-color: ${color};`)
+			.header__burger-line-3(style=`background-color: ${color};`)

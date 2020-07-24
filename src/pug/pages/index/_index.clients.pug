@@ -1,0 +1,20 @@
+-
+	var clientsList = [
+		{ name: 'vtb', logo: '/../assets/img/logo-vtb.png'},
+		{ name: 'urs', logo: '/../assets/img/logo-uralsib.png'},
+		{ name: 'psb', logo: '/../assets/img/logo-psb.png'},
+		{ name: 'alp', logo: '/../assets/img/logo-alpha.png'},
+		{ name: 'akb', logo: '/../assets/img/logo-akbars.png'},
+		{ name: 'rsh', logo: '/../assets/img/logo-rshb.png'},				
+		{ name: 'gen', logo: '/../assets/img/logo-geninv.png'},				
+	]
+
+.clients.screen(data-pager="2")
+	.container
+		.clients__title.title Наши клиенты
+		.clients__text Мы помогаем крупному и среднему бизнесу разрабатывать новые digital–продукты
+		.clients__list
+			each item in clientsList
+				.clients__item
+					img(src= item.logo alt= item.name)
+

@@ -4,6 +4,13 @@ include ../../../../component/header/header
 block db
 	- var navActive = 'projectss';
 
+block head
+	+head(
+		'ВТБ Мои инвестиции', 
+		'Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ',
+		'ВТБ, банковское и брокерское приложение, лучшее инвестиционное приложение 2018'
+	)
+
 block header
 	+header('#112A94', 'white')
 
@@ -14,7 +21,7 @@ block content
 
 				.projects__block-1
 					.projects__content-1.white
-						.title ВТБ Мои инвестиции
+						.title.projects__ ВТБ Мои инвестиции
 						.text.projects__text Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ и ориентировано на клиентов, самостоятельно управляющих  своими инвестициями
 						.text «Лучшее инвестиционное приложение» от РАЭК, конкурс «Золотое приложение 2018»
 					.projects__phone-1
@@ -43,7 +50,7 @@ block content
 
 				.projects__content-3
 					.text Мобильное приложение работает  на платформе EffectiveTrade Mobile.
-		
+
 				.projects__phone-6
 					img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
 

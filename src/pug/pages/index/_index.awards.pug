@@ -1,0 +1,19 @@
+-
+	var awardsList = [
+		{ text: '1 место', logo: '/../assets/img/icon-golden-app.png', description: 'В номинации «Лучшее инвестиционное приложение»' },
+		{ text: '2 место', logo: '/../assets/img/icon-fin-award.png',  description: 'В номинации «Инвестиционный продукт или сервис»' },
+		{ text: 'Топ 2',   logo: '/../assets/img/icon-banks.png',      description: 'В рейтиге мобильных приложений для инвестиций' },
+		{ text: 'Топ 25',  logo: '/../assets/img/icon-app-store.png',  description: 'В категории «Финансы» в App Store'}		
+	]
+
+.awards.screen(data-pager="2")
+	.container
+		.awards__title.title Наши награды	
+		.awards__list
+			each item in awardsList
+				.awards__item
+					.awards__image
+						img(src= item.logo alt= item.text)
+					.awards__text= item.text
+					.awards__description= item.description
+

@@ -15,25 +15,28 @@ block content
 		.container
 			.contacts
 				.title.contacts__title Давайте обсудим Ваш проект
+
 				.contacts__wrap
 					form.discussion__form.contacts__form
-						img.discussion__icon(src='/../assets/img/tube.png' alt='phone icon')
+						img.discussion__phone(src='/../assets/img/tube.png' alt='phone icon')
 						input.discussion__input(type='text' name='phonenumber' placeholder='Введите номер телефона')
 						.discussion__line 
-							.discussion__result
+						.discussion__result
 						.discussion__notice Нажимая на «Отправить заявку», вы даёте согласие на обработку персональных данных					
-						input.discussion__submit(type="submit" value="Отправить")
+						input.discussion__submit(type="submit" value="Отправить заявку")
 
 					.contacts__map#map
-				.contacts__info
-					.contacts__pointer
-						img(src='/../assets/img/pointer.png' alt='')
-					.contacts__address Москва, ул. Краснобогатырская, д.6, Бизнес-Центр «Вилла-Рива», офис 233
-					.contacts__envelope
-						img(src='/../assets/img/email.png' alt='')
-					.contacts__email info@digitalcloud.com
 
-				.contacts__mobile
+				.contacts__footer
+					.contacts__info
+						.contacts__pointer
+							img(src='/../assets/img/pointer.png' alt='pointer')
+						.contacts__address Москва, ул. Краснобогатырская, д.6, Бизнес-Центр «Вилла-Рива», офис 233
+						.contacts__envelope
+							img(src='/../assets/img/email.png' alt='email')
+						.contacts__email info@digitalcloud.com
+
+				.contacts__mobile-footer
 					p Москва, ул. Краснобогатырская, д.6, Бизнес-Центр «Вилла-Рива», офис 233		
 					p +7 (999) 745-55-55							
 					p info@digitalcloud.com

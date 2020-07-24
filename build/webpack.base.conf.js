@@ -14,6 +14,7 @@ const PATHS = {
 // Pages const for HtmlWebpackPlugin
 const PAGES_DIR = `${PATHS.src}/pug/pages`;
 const PAGES = getPugFromDir(PAGES_DIR);
+const CHUNKS = PAGES.map(el => el.replace('.pug', '').replace(/\\index$/, '').replace(/^blog.+/, 'blog_item').replace(/^projects.+/, 'projects_item'));
 
 function getPugFromDir(base, dir = '') {
   const temp = [];
@@ -31,26 +32,21 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
-    // module: `${PATHS.src}/your-module.js`,
+    index: PATHS.src,
+    about: `${PATHS.src}/about.js`,
+    blog: `${PATHS.src}/blog.js`,
+    blog_item: `${PATHS.src}/blog-item.js`,
+    services: `${PATHS.src}/services.js`,
+    contacts: `${PATHS.src}/contacts.js`,
+    projects: `${PATHS.src}/projects.js`,
+    projects_item: `${PATHS.src}/projects-item.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
     publicPath: "/"
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          name: "vendors",
-          test: /node_modules/,
-          chunks: "all",
-          enforce: true
-        }
-      }
-    }
-  },
+
   module: {
     rules: [
       {
@@ -122,9 +118,10 @@ module.exports = {
     ]),
 
     /* Automatic creation any html pages (Don't forget to RERUN dev server!) */
-    ...PAGES.map(page => new HtmlWebpackPlugin({
+    ...PAGES.map((page, index) => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/, '.html')}`
+      filename: `./${page.replace(/\.pug/, '.html')}`,
+      chunks: [`${CHUNKS[index]}`]      
     }))
   ]
 };

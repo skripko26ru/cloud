@@ -1,108 +1,84 @@
 .competence {
   @media screen and (max-width: 640px) {
-    margin: 0 10%;
-  } 
-
-  // iPhone 6/7/8
-  @media screen and (device-aspect-ratio: 375/667) {
-    margin-top: 400px;    
-    margin-bottom: 200px;    
+    width: 100vw;
+    height: 100vh;
   }
-
-  // iPhone X
-  @media screen and (device-aspect-ratio: 375/812) {
-    margin-top: 270px;
-  }
-
-  // Pixel 2
-  @media screen and (device-aspect-ratio: 411/731) {
-    margin-top: 350px;
-  }
-
-  // Pixel 2XL
-  @media screen and (device-aspect-ratio: 411/823) {
-    margin-top: 260px;
-  }
-
-  // iPhone 6/7/8 Plus
-  @media screen and (device-aspect-ratio: 414/736) {
-    margin-top: 350px;
-  }
-
-
-  @media screen and (max-width: 360px){
-    margin-top: 450px;
-  }
-
 
   &__title {
-    margin: 130px 0 60px 0;
+    margin-bottom: 62px;
     font-family: $semiBoldFont;
 
-    @media screen and (max-width: 1300px), screen and (max-height: 770px) {
-      margin-bottom: 18px;
-    }  
-
-    @media screen and (max-width: 600px) {
-      font-size: 24px;
+    @media screen and (max-width: 1366px), screen and (max-height: 768px) {
       margin-bottom: 32px;
-    } 
+    }
+
+    @media screen and (max-width: 640px) {            
+      font-size: 24px;
+    }
   }
 
-  &__wrap {
-    width: 1000px;
-    height: 550px;    
+  &__wrapper {
+    @media screen and (max-width: 640px) {
+      width: 80%;
+      margin: auto 10%;
+    }
   }
 
   &__item {
     margin-bottom: 36px;
 
-    @media screen and (max-width: 1300px), screen and (max-height: 770px) {
-      margin-bottom: 24px;
-    }    
-        
     &:last-child {
       margin-bottom: 0;
 
-      @media screen and (max-width: 480px) {
-        margin-bottom: 100px;
+      @media screen and (max-width: 640px) {
+        margin-bottom: 50px;
       }
     }
 
     &.competence--active {
       margin-left: 100px;
 
-      @media screen and (max-width: 650px), screen and (max-height: 500px) {
-        margin-left: 0;
+      @media screen and (max-width: 640px) {
+        margin: 0 0 24px 0;
       }
-      
+    }
+
+    @media screen and (max-width: 1366px), screen and (max-height: 768px) {
+      margin-bottom: 18px;
     }
   }
 
   &__header {
-    display: flex;
     position: relative;
     padding-left: 60px;
-    cursor: pointer;   
+    cursor: pointer;
 
-    .competence--active & {      
+    .competence--active & {
       margin-bottom: 66px;
-      cursor: default;  
+      cursor: default;
 
       &:after {
         display: block;
       }
+
+      @media screen and (max-width: 1366px), screen and (max-height: 768px) {
+        margin-bottom: 36px;
+      }
     }
 
     &:after {
-      width: 40px;
-      height: 2px;
+      content: '';
       display: none;
       position: absolute;
       bottom: -32px;
       left: 0;
-      content: '';
-      background-color: $MainDark;      
+      width: 40px;
+      height: 2px;
+      background-color: $MainDark;
+
+      @media screen and (max-width: 1366px), screen and (max-height: 768px) {
+        bottom: -18px;
+      }
     }
   }
 
@@ -111,32 +87,30 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    cursor: pointer;   
+    cursor: pointer;
   }
 
   &__label {
     font-family: $semiBoldFont;
-    font-size: 20px;    
+    font-size: 20px;
     color: $Blue;
     cursor: pointer;
   }
 
   &__text {
-    display: none;         
+    display: none;
     width: 500px;
-    line-height: 170%;  
-    
-    @media screen and (max-width: 1000px) {
+
+    .competence--active & {
+      display: block;
+    }
+
+    @media screen and (max-width: 700px) {
       width: 400px;
-    } 
+    }
 
-    @media screen and (max-width: 500px) {
-      width: 300px;
-      height: 100%;     
-    } 
-
-    .competence--active & {            
-      display: block;     
+    @media screen and (max-width: 480px) {
+      width: 100%;
     }
   }
 }

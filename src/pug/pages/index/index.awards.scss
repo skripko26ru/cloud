@@ -1,59 +1,80 @@
 .awards {
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 
-    @media screen and (max-width: 600px) {
-      margin: 0 10% 44px;
-    } 
+    @media screen and (max-width: 640px) {
+      margin: 84px 10% 45px;
+    }
+
+    @media screen and (max-width: 350px) {
+      font-size: 28px;
+    }
   }
+
+  // =============================== список наград ==================================
 
   &__list {
-    width: 100%;
-    height: 180px;
+    display: flex;
     margin-left: 100px;
-    background-image: url(../img/awards.png);
-    background-repeat: no-repeat;
-    background-size: contain;
 
-    @media screen and (max-width: 600px){
-      display: none;
+    @media screen and (max-width: 640px) {
+      flex-wrap: wrap;
+      margin: 0;
+      align-self: flex-start;
     }
   }
 
-  &__verticalList {
-    display: none;
+  // ================================ элемент списка =================================
 
-    @media screen and (max-width: 600px) {
-      display: block;
-      margin-bottom: 15px;
+  &__item {
+    width: 280px;
+    margin-right: 100px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100vh;
+      padding: 32px;
+      margin: 0;
+
+      &:nth-child(odd) {
+        background-color: $LightGrayDecor;
+      }
     }
   }
 
-  &__item-1 {
-    width: 70%;
-    height: 270px;    
-    margin: 0 auto;
-    background-size: cover;
-    background-repeat: no-repeat;   
-    background-image: url(../img/awards-1.png);    
+  &__image {
+    display: flex;
+    width: 100%;
+    height: 52px;
+    margin-bottom: 35px;
 
-    @media screen and (max-width: 480px) {
-      width: 100%;
-    } 
+    & img {
+      align-self: center;
+    }
   }
 
-  &__item-2 {
-    @extend .awards__item-1;
-    background-image: url(../img/awards-2.png);
+  &__text {
+    width: 100%;
+    margin-bottom: 16px;
+    font-family: $semiBoldFont;
+    font-size: 20px;
+    line-height: 100%;
   }
 
-  &__item-3 {
-    @extend .awards__item-1;
-    background-image: url(../img/awards-3.png);
-  }
+  &__description {
+    @media screen and (max-width: 550px) {
+      max-width: 300px;
+    }
 
-  &__item-4 {
-    @extend .awards__item-1;
-    background-image: url(../img/awards-4.png);
+    @media screen and (max-width: 400px) {
+      max-width: 270px;
+    }
+
+    @media screen and (max-width: 350px) {
+      max-width: 230px;
+    }
   }
 }

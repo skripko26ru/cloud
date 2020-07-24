@@ -1,170 +1,145 @@
 .contacts {
-  display: flex;
-  flex-wrap: wrap;
-
-  @media screen and (max-width: 480px) {
-    margin-top: 100px;
-  }
-
-  @media screen and (max-width: 1500px) {
-    flex-direction: column;
-  }
-
-  @media screen and (max-width: 480px) {
-    margin-bottom: 50px;
-  }
-
   &__title {
-    @media screen and (max-width: 480px) {
-      margin: 0 10%;
+    margin-bottom: 80px;
+
+    @media screen and (max-width: 1300px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 80%;
+      margin: 60px 10% 0;
+      font-size: 24px;
     }
   }
 
   &__wrap {
     display: flex;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column;
     }
   }
 
+  // ============================ подгонка типового модуля формы ==================================
+
   &__form {
-    @media screen and (max-width: 1700px) {
-      margin-left: 0;
-      margin-right: 30px;
+    margin: 0 46px 0 100px !important;
+
+    @media screen and (max-width: 1400px) {
+      margin: 0 46px 0 0 !important;
     }
 
     @media screen and (max-width: 1000px) {
-      margin: 0 auto;
+      margin: 0 20px 0 0 !important;
+    }
+
+    @media screen and (max-width: 800px) {
+      align-self: center;
+      margin: 0 20px 20px 0 !important;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 90vw !important;
+      margin: 0 auto !important;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 100vw !important;      
     }
   }
 
-  // ============================== контент справа ==============================
+  // ============================== карта ============================================
 
   &__map {
     width: 700px;
     height: 360px;
-    margin-left: -150px;
 
-    @media screen and (max-width: 1800px) {
-      width: 50%;
+    @media screen and (max-width: 1600px) {
+      width: 40vw;
     }
 
-    @media screen and (max-width: 1500px) {
-      margin: 0;
-    }
-
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1200px) {
       height: 300px;
     }
 
-    @media screen and (max-width: 1000px) {
-      width: 80%;
-      height: 200px;
-      margin: 0 auto;
+    @media screen and (max-width: 800px) {
+      width: 80vw;
+      height: 180px;
+      align-self: center;
     }
 
-    @media screen and (max-width: 480px) {
-      width: 80%;
-      margin: 0 10%;
-    }
-  }
-
-  &__pointer {
-    position: absolute;
-    bottom: 80px;
-    right: 1320px;
-
-    @media screen and (max-width: 1400px) {
-      right: 940px;
-    }
-
-    @media screen and (max-width: 1100px) {
-      right: 0;
-      bottom: 120px;
-      left: 30px;
-    }
-
-    @media screen and (max-width: 650px) {
-      bottom: 130px;
-    }
-
-    @media screen and (max-width: 480px) {
-      bottom: 90px;
+    @media screen and (max-width: 640px) {
+      width: 80vw;
+      margin: 0 10vw;
+      align-self: flex-start;
     }
   }
 
-  &__address {
-    position: absolute;
-    bottom: 80px;
-    right: 670px;
+  // ============================== строка с адресом и почтой =================================
+  &__footer {
+    position: fixed;
+    bottom: 73px;
+    width: 100%;
 
-    @media screen and (max-width: 1400px) {
-      right: 380px;
-      font-size: 14px;
-    }
-
-    @media screen and (max-width: 1100px) {
-      right: 0;
-      bottom: 120px;
-      left: 70px;
-      margin-right: 50px;
-    }
-
-    @media screen and (max-width: 480px) {
-      bottom: 80px;
-    }
-  }
-
-  &__envelope {
-    position: absolute;
-    bottom: 80px;
-    right: 550px;
-
-    @media screen and (max-width: 1400px) {
-      right: 320px;
-    }
-
-    @media screen and (max-width: 1100px) {
-      left: 30px;
-    }
-
-    @media screen and (max-width: 480px) {
-      bottom: 50px;
-    }
-  }
-
-  &__email {
-    position: absolute;
-    bottom: 80px;
-    right: 340px;
-
-    @media screen and (max-width: 1400px) {
-      right: 140px;
-      font-size: 14px;
-    }
-
-    @media screen and (max-width: 1100px) {
-      left: 70px;
-    }
-
-    @media screen and (max-width: 480px) {
-      bottom: 50px;
-    }
+    // @media screen and (max-width: 640px) {     
+    //   display: none;
+    // }
   }
 
   &__info {
-    @media screen and (max-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (max-width: 1300px) {
+      justify-content: flex-start;
+    }
+
+    @media screen and (max-width: 640px) {     
       display: none;
     }
   }
 
-  &__mobile {
+  &__pointer {
+    margin-right: 19px;
+
+    @media screen and (max-width: 1300px) {
+      display: none;
+    }
+  }
+
+  &__address {
+    margin-right: 54px;
+
+    @media screen and (max-width: 730px) {
+      font-size: 14px;
+    }
+  }
+
+  &__envelope {
+    margin-right: 18px;
+
+    @media screen and (max-width: 1300px) {
+      display: none;
+    }
+  }
+
+  &__email {
+    margin-right: 334px;
+  }
+
+  &__mobile-footer {
     display: none;
 
-    @media screen and (max-width: 480px) {
-      margin-top: 24px;
+    @media screen and (max-width: 640px) {
       display: block;
+      margin-top: 24px;      
     }
 
     & p {

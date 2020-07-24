@@ -3,129 +3,191 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1400px) {
     flex-direction: column;
+  }
+
+  @media screen and (max-width: 640px) {
+    overflow: hidden;
   }
 
   &__title {
     width: 100%;
     margin: 245px 0 75px;
 
-    @media screen and (max-width: 700px) {
-      margin: 145px 0 50px;
-      font-size: 26px;
-    }
+    @media screen and (max-width: 1300px) {
+      margin: 150px 0 60px;      
+    } 
 
     @media screen and (max-width: 640px) {
-      margin: 100px 0 30px 10%;
-      font-size: 24px;
-    }
-  }
-
-  &__intro:hover {
-    color: $White;
-    fill: $White;
-    background: $Blue;
-    transition: all 0.3s ease;
-  }
+      margin: 30px 0 30px 10%;       
+    }  
+  } 
 
   &__intro {
+    position: relative;
     width: 560px;
     height: 500px;
-    position: relative;
     padding: 0 50px;
     color: $Blue;
     fill: $Blue;
-    background: $BG;
+    background-color: $BG; 
 
-    @media screen and (max-width: 700px) {
-      width: 400px;
-      height: 400px;
-      padding: 0 40px;
+    &:hover {
+      color: $White;
+      fill: $White;
+      background-color: $Blue;
+      transition: all 0.3s ease;
     }
 
     @media screen and (max-width: 640px) {
       display: none;
-    }
-
-    &-number {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      font-size: 20px;
-      font-weight: 600;
-
-      @media screen and (max-width: 480px) {
-        display: none;
-      }
-    }
-
-    &-text {
-      margin-top: 195px;
-      font-size: 20px;
-      line-height: 170%;
-      color: $BG;
-
-      @media screen and (max-width: 700px) {
-        margin-top: 100px;
-        font-size: 16px;
-      }
-
-      @media screen and (max-width: 480px) {
-        margin-top: 40px;
-      }
-    }
-
-    &-icon {
-      position: absolute;
-      bottom: 65px;
-      left: 30px;
-    }
-
-    &-caption {
-      position: absolute;
-      bottom: 30px;
-      left: 30px;
-      font-size: 20px;
-      font-weight: 600;
-    }
+    } 
   }
+
+  &__number {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__banner {
+    margin-top: 195px;
+    font-size: 20px;   
+    color: $White;  
+  } 
+
+  &__icon {
+    position: absolute;
+    bottom: 65px;
+    left: 30px;
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  // =================================== Скрытый "мобильный" блок ====================================
 
   &__hidden {
     display: none;
+    width: 80%;
+    margin: auto 10%;
 
     @media screen and (max-width: 640px) {
-      width: 100%;
       display: block;
-    }
-
-    @media screen and (max-width: 480px) {
-      margin: -250px 0 -80px;
-    }
-
-    @media screen and (max-width: 360px) {
-      margin: -430px 0 -80px;
-    }
-
-    // Pixel 2
-    @media screen and (device-aspect-ratio: 411/731) {
-      margin-top: -340px;
-    }
-
-    // iPhone 6/7/8
-    @media screen and (device-aspect-ratio: 375/667) {
-      margin: -360px 0 -280px;
-    }
-
-    // iPhone 6/7/8 Plus
-    @media screen and (device-aspect-ratio: 414/736) {
-      margin-top: -330px;
     }
   }
 
+  &__item {
+    margin-bottom: 36px;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media screen and (max-width: 640px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &.services--active {
+      margin-left: 100px;
+
+      @media screen and (max-width: 640px) {
+        margin: 0 0 24px 0;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 18px;
+    }
+
+    @media screen and (max-width: 350px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer;
+
+    .services--active & {
+      margin-bottom: 66px;
+      cursor: default;
+
+      &:after {
+        display: block;
+      }
+
+      @media screen and (max-width: 640px) {
+        margin-bottom: 36px;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: none;
+      position: absolute;
+      bottom: -32px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: $MainDark;
+
+      @media screen and (max-width: 640px) {
+        bottom: -18px;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  &__label {
+    font-family: $semiBoldFont;
+    font-size: 20px;
+    color: $Blue;
+    cursor: pointer;
+  }
+
+  &__description {
+    display: none;
+    width: 500px;
+
+    .services--active & {
+      display: block;
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 400px;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 350px) {
+      font-size: 14px;
+    }
+  }
+
+  // ================================== Остальной контент ==========================================
+
   &__info {
-    max-width: 800px;
-    margin: 0 80px 240px 0;
+    max-width: 800px;    
+    margin: 0 100px 120px 0;
 
     @media screen and (max-width: 640px) {
       width: 80%;
@@ -134,35 +196,30 @@
 
     @media screen and (max-width: 400px) {
       width: 280px;
-    }
-
-    &-title {
-      margin-bottom: 75px;
-
-      @media screen and (max-width: 650px), screen and (max-height: 500px) {
-        margin-bottom: 25px;
-        font-size: 24px;
-      }
-    }
-
-    &-text {
-      margin: 16px 0;
-
-      @media screen and (max-width: 650px), screen and (max-height: 500px) {
-        font-size: 16px;
-      }
-    }
+    }   
   }
 
-  &--mt-240 {
-    margin-top: 240px;
+  &__head {
+    margin-bottom: 50px;    
 
-    @media screen and (max-width: 650px), screen and (max-height: 500px) {
+    @media screen and (max-width: 640px) {
+      margin-bottom: 30px;    
+    }
+  } 
+
+  &__text {
+    margin-bottom: 16px;  
+  }
+
+  &--mt-150 {
+    margin-top: 150px;
+
+    @media screen and (max-width: 640px) {
       margin-top: 40px;
     }
   }
 
-  &--mb-140 {
-    margin-bottom: 140px;
+  &--mb-100 {
+    margin-bottom: 100px;
   }
 }

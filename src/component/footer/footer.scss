@@ -15,7 +15,7 @@
     display: none;
   }
 
-  @media screen and (max-width: 600px), screen and (max-height: 700px) {
+  @media screen and (max-width: 640px), screen and (max-height: 700px) {
     padding: 0 0 40px;
   }
   @media screen and (max-width: 500px), screen and (max-height: 500px) {
@@ -37,7 +37,7 @@
   &__hidden {
     display: none;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 640px) {
       display: none;
     }
     

@@ -1,175 +1,119 @@
 .about {
-  @media screen and (max-width: 640px) {
-    margin-left: 10%;
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+    margin: 0 10%;
   }
 
   &__title {
-    margin: 200px 0 60px;
+    margin: 250px 0 77px;
 
-    @media screen and (max-width: 1000px) {
-      margin: 100px 0 30px;
-    }
-
-    @media screen and (max-width: 480px) {
-      font-size: 24px;
+    @media screen and (max-width: 640px) {
+      margin: 40px 0 46px;      
     }
   }
+
+  &__icon {
+    margin-bottom: 32px;
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__label {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  // ==================================== интро ====================================================
 
   &__intro {
-    margin: 0 80px 40px 0;
+    max-width: 600px;
+    margin-bottom: 40px;
 
-    @media screen and (max-width: 1300px) {
-      margin: 0 150px 40px 0;
-    }
-
-    @media screen and (max-width: 480px) {
-      margin: 0 100px 40px 0;
-    }
-
-    &-icon {
-      margin-bottom: 30px;
-
-      @media screen and (max-width: 480px) {
-        margin-bottom: 20px;
-      }
-    }
-
-    &-text {
-      @media screen and (max-width: 480px) {
-        font-size: 16px;
-      }
+    @media screen and (max-width: 640px) {
+      margin-bottom: 26px;
     }
   }
 
-  &__block-1 {
-    margin: 0 250px 50px 100px;
+  // ==================================== блок 1 ====================================================
 
-    @media screen and (max-width: 1300px) {
-      margin: 0 100px 50px 0;
+  &__block {
+    max-width: 900px;
+    margin: 0 0 46px 100px;
+
+    @media screen and (max-width: 1000px) {
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  // ==================================== блок 2 ====================================================
+
+  &__block-2 {
+    max-width: 670px;
+    margin-top: 200px;
+
+    @media screen and (max-width: 640px) {
+      margin-top: 60px;
+    }
+  }
+
+  &__title-2 {
+    margin-bottom: 75px;
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__text-2 {    
+    margin-bottom: 16px;
+  }
+
+  &__wrap {
+    display: flex;
+    margin-bottom: 36px;
+    align-items: center;
+
+    & img {
+      margin-right: 42px;
     }
 
-    &-title {
+    & span {
+      font-family: $semiBoldFont;
+      line-height: 100%;
+    }
+  }
+
+  // ==================================== блок 3 ====================================================
+
+  &__block-3 {
+    max-width: 900px;
+    margin: 200px 0 150px;
+
+    @media screen and (max-width: 640px) {
+      margin-top: 60px;
+    }
+  }
+
+  &__text-3 {    
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 24px;
+    }
+
+    & span {
       font-size: 24px;
       font-weight: 600;
 
-      @media screen and (max-width: 480px) {
-        font-size: 24px;
-      }
-    }
-
-    &-text {
-      @media screen and (max-width: 480px) {
-        font-size: 16px;
-      }
-    }
-  }
-
-  &__block-2 {
-    margin: 150px 80px 0 0;
-
-    @media screen and (max-width: 1300px) {
-      margin: 100px 100px 0 0;
-    }
-
-    @media screen and (max-width: 480px) {
-      margin: 60px 62px 0 0;
-    }
-
-    &-title {
-      margin-bottom: 75px;
-
-      @media screen and (max-width: 800px) {
-        margin: 0 40px 75px 0;
-        font-size: 24px;
-      }
-
-      @media screen and (max-width: 480px) {
-        margin: 0 20px 30px 0;
-      }
-    }
-
-    &-text {
-      margin-bottom: 16px;
-
-      @media screen and (max-width: 480px) {
-        margin: 0 20px 8px 0;
-        font-size: 16px;
-      }
-    }
-
-    &-wrap {
-      width: 400px;
-      height: 30px;
-      position: relative;
-      margin: 0 0 35px 80px;
-
       @media screen and (max-width: 640px) {
-        margin-left: 0;
-        margin-bottom: 15px;
-      }
-
-      @media screen and (max-width: 480px) {
-        width: 80%;
-        margin-bottom: 30px;
-        color: $Blue;
-      }
-
-      & img {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-
-      & span {
-        position: absolute;
-        top: 0;
-        left: 50px;
-        font-family: $semiBoldFont;
-        line-height: 100%;
-
-        @media screen and (max-width: 400px) {
-          font-size: 14px;
-          left: 40px;
-        }
-      }
-    }
-  }
-
-  &__block-3 {
-    margin: 150px 350px 50px 0;
-
-    @media screen and (max-width: 1300px) {
-      margin: 100px 100px 0 0;
-    }
-
-    &-title {
-      margin-bottom: 75px;
-
-      @media screen and (max-width: 800px) {
-        font-size: 24px;
-        margin-right: 40px;
-      }
-
-      @media screen and (max-width: 480px) {
-        margin: 0 20px 44px 0;
-      }
-    }
-
-    &-text {
-      margin-bottom: 40px;
-
-      @media screen and (max-width: 480px) {
         font-size: 16px;
-        margin-bottom: 20px;
-      }
-
-      & span {
-        font-size: 24px;
-        font-weight: 500;
-
-        @media screen and (max-width: 500px) {
-          font-size: 18px;
-        }
       }
     }
   }
@@ -177,13 +121,9 @@
   &--mt-150 {
     margin-top: 150px;
 
-    @media screen and (max-width: 500px) {
-      margin-top: 50px;
+    @media screen and (max-width: 640px) {
+      margin-top: 60px;
     }
-  }
-
-  &--mb-150 {
-    margin-bottom: 150px;
   }
 
   &--blue {

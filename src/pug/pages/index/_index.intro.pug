@@ -7,15 +7,16 @@
 
 .intro.screen(data-pager="2")
 	.container
-		.title.intro__title Работаем с 2007 года
-		.text.intro__text
+		.intro__title.title Работаем с 2007 года
+		.intro__text
 			| Делаем мобильные приложения, проектируем личные кабинеты, трейдинговые сервисы и информационные системы.
 			| Используем современные инструменты разработки и проектирования пользовательского интерфейса
 		.intro__list
 			each item in introList
 				.intro__item
 					.intro__header= item.header
-					.intro__content= item.content
+					.intro__dash
+					=item.content
 
 
 

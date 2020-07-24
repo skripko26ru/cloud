@@ -23,70 +23,70 @@ block header
 block content
 	main
 		.about.container
-			.title.about__title Мы		
+			.about__title.title Мы		
 			each item in aboutList
 				.about__intro
-					.about__intro-icon
+					.about__icon
 						img(src= `/../assets/img/${item.name}.png` alt= item.name)
-					.text.about__intro-text= item.text
+					.text= item.text
 
-			.about__block-1.about--mt-150
-				.text.about__block-1-text  
-					span.about__block-1-title  «EffectiveTrade Mobile»
+			.about__block.about--mt-150
+				.text  
+					span.about__label  «EffectiveTrade Mobile»
 					|  — это удобная архитектура, состоящая из собственных решений СloudFactory и разворачивающихся  на стороне заказчика. 
 
-			.about__block-1
-				.about__block-1-title  Состоит из модулей:
-				.text.about__block-1-text  
+			.about__block
+				.about__label  Состоит из модулей:
+				.text  
 					span.about--blue Effectevetrade DataHub
 					|  — API в виде REST сервиса.
-				.text.about__block-1-text   	
+				.text   	
 					span.about--blue Effectevetrade Trading
 					|  — решение, предназначенное для выставления заявок и связанных с этим бизнес-процессов.
-				.text.about__block-1-text    	
+				.text    	
 					span.about--blue Effectevetrade Position keeping
 					|  — аналитическая база данных.
 
 			.about__block-2
-				.title.about__block-2-title  МОДУЛЬ EFFECTIVETRADE DATAHUB				
-				.text.about__block-2-text Ядро обработки  веб-запросов API в виде REST сервиса
-				.text.about__block-2-text Идентификация права
-				.text.about__block-2-text Портфельные данные
-				.text.about__block-2-text Рыночные данные
-				.text.about__block-2-text Торговые операции
-				.text.about__block-2-text Неторговые операции
-				.text.about__block-2-text Платежные системы
-				.text.about__block-2-text Новости, аналитика, рекомендации
-				.text.about__block-2-text Чаты и поддержка
-				.text.about__block-2-text Продукты и сервисы
-				.text.about__block-2-text Удаленное открытие счета
-				.text.about__block-2-text Партнерские отношения
+				.title.about__title-2 МОДУЛЬ EFFECTIVETRADE DATAHUB				
+				.text.about__text-2 Ядро обработки  веб-запросов API в виде REST сервиса
+				.text.about__text-2 Идентификация права
+				.text.about__text-2 Портфельные данные
+				.text.about__text-2 Рыночные данные
+				.text.about__text-2 Торговые операции
+				.text.about__text-2 Неторговые операции
+				.text.about__text-2 Платежные системы
+				.text.about__text-2 Новости, аналитика, рекомендации
+				.text.about__text-2 Чаты и поддержка
+				.text.about__text-2 Продукты и сервисы
+				.text.about__text-2 Удаленное открытие счета
+				.text.about__text-2 Партнерские отношения
 
 			.about__block-2
-				.title.about__block-2-title  МОДУЛЬ EFFECTIVETRADE TRADING
-				.about__block-2-wrap
+				.about__title-2.title  МОДУЛЬ EFFECTIVETRADE TRADING
+				.about__wrap
 					img(src= '/../assets/img/about-5.png' alt= 'about-5')
 					span.text Отправка заявок
-				.about__block-2-wrap
+				.about__wrap
 					img(src= '/../assets/img/about-6.png' alt= 'about-6')
 					span.text Различные типы иснтрументов
-				.about__block-2-wrap
+				.about__wrap
 					img(src= '/../assets/img/about-7.png' alt= 'about-7')
 					span.text Смс/пин-код/TouchID/FaceId
-				.about__block-2-wrap
+				.about__wrap
 					img(src= '/../assets/img/about-8.png' alt= 'about-8')
-					span.text Журнал заявок
+					span.text  Журнал заявок
 
-			.about__block-3.about--mb-150
-				.title.about__block-3-title  МОДУЛЬ EFFECTIVETRADE POSITION KEEPING
-				.text.about__block-3-text 
+			.about__block-3
+				.title.about__title-2 МОДУЛЬ EFFECTIVETRADE POSITION KEEPING
+				.text.about__text-3 
 					span Аналитическая база данных 
 					| предназначенная для обработки операций всех типов финансовых инструментов и всех видов сделок в режиме онлайн.
-				.text.about__block-3-text Отображение позиции на текущую дату в режиме реального времени.
-				.text.about__block-3-text Возможность просмотра позиции на любую историческую дату.
-				.text.about__block-3-text Построение диаграмм  распределения активов в портфеле.
-				.text.about__block-3-text Построение графика доходности, прибыли за период с возможностью сравнения с выбранными бенчмарками.
-				.text.about__block-3-text Соблюдение инвестиционных деклараций.
+				.text.about__text-3 Отображение позиции на текущую дату в режиме реального времени.
+				.text.about__text-3 Возможность просмотра позиции на любую историческую дату.
+				.text.about__text-3 Построение диаграмм  распределения активов в портфеле.
+				.text.about__text-3 Построение графика доходности, прибыли за период с возможностью сравнения с выбранными бенчмарками.
+				.text.about__text-3 Соблюдение инвестиционных деклараций.
 
 block footer
 	+footer('', false)

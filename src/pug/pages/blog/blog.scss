@@ -7,127 +7,85 @@
     color: $Blue !important;
   }
 
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 850px;
+    margin-bottom: 150px;
 
-    @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-      width: 750px;
-    }
-
-    @media screen and (max-width: 900px) {
-      width: 400px;
+    @media screen and (max-width: 1000px) {
+      max-width: 600px;
     }
   }
 
   &__title {
     width: 100%;
-    margin: 294px 0 124px 0;
+    margin: 200px 0 50px;
 
-    @media screen and (max-width: 900px) {
-      margin: 120px 0 60px;
+    @media screen and (max-width: 640px) {
+      margin: 50px 10% 50px;
     }
   }
+
+  // ============================  item  ===================================
 
   &__item {
-    width: 380px;
+    max-width: 380px;
     height: 314px;
-    position: relative;
-    margin: 44px 0;
-    background: $White;   
+    padding: 60px 60px 40px;
+    background-color: $White;
+    
 
-    @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-      width: 330px;
-      height: 260px;
-    }
+    &:nth-child(even) {
+      margin-top: 100px;
 
-    @media screen and (max-width: 900px) {
-      margin: 10px 0;
-    }
-
-    &-date {
-      position: absolute;
-      top: 60px;
-      left: 60px;
-      font-family: $semiBoldFont;
-      font-size: 20px;
-
-      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-        top: 30px;
-        left: 30px;
+      @media screen and (max-width: 1100px) {
+        margin-top: 0;
       }
     }
 
-    &-line {
-      position: absolute;
-      top: 112px;
-      left: 60px;
-      width: 40px;
-      height: 2px;
-      background: $MainDark;
-
-      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-        top: 80px;
-        left: 30px;
-      }
+    @media screen and (max-width: 1100px) {
+      margin-bottom: 40px;
     }
 
-    &-text {
-      width: 260px;
-      position: absolute;
-      top: 146px;
-      left: 60px;
-      line-height: 170%;
-
-      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-        top: 110px;
-        left: 30px;
-      }
+    @media screen and (max-width: 640px) {
+      margin-left: 10%;
     }
 
-    &-further {
-      position: absolute;
-      top: 247px;
-      left: 60px;
-      line-height: 170%;
-      color: $Blue;
-
-      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-        top: 200px;
-        left: 30px;
-      }
-    }
-
-    & img {
-      position: absolute;
-      top: 258px;
-      left: 190px;
-
-      @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-        top: 210px;
-        left: 160px;
-      }
+    @media screen and (max-width: 480px) {
+      width: 100%;      
+      margin-left: 0;
+      margin-bottom: 24px;
     }
   }
 
-  &--mt-100 {
-    position: relative;
-    top: 100px;
-
-    @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-      top: 0;
-    }
+  &__date {
+    margin-bottom: 32px;
+    font-family: $semiBoldFont;
+    font-size: 20px;
   }
 
-  &--mb-150 {    
-    margin-bottom: 150px;
+  &__line {
+    width: 40px;
+    height: 2px;
+    margin-bottom: 32px;
+    background: $MainDark;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__read {
+    color: $Blue;
+  }
+
+  &__arrow {
+    margin-left: 11px;
   }
 }

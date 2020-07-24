@@ -6,4 +6,6 @@ import './js/map.js';
 // import './js/ball.js';
 // import './js/move.js';
 
-import './assets/scss/main.scss';
+import './assets/scss/index.scss';
+
+

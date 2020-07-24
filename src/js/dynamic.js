@@ -31,6 +31,18 @@ $competenseList.on('click', function (e) {
   $itemActive.addClass('competence--active');
 });
 
+// ==================== переключение между элементами на страницу "Услуги" ====================
+
+const $servicesList = $('.services__label, .services__img');
+const $servicesItems = $('.services__item');
+
+$servicesList.on('click', function (e) {
+  const $this = $(this);
+  const $servicesActive = $this.closest('.services__item');
+  $servicesItems.removeClass('services--active');
+  $servicesActive.addClass('services--active');
+});
+
 // ================== переключение между разноцветными страницами с телефонами на кругах ================
 
 const $showingList = $('.showing__title');
@@ -90,18 +102,31 @@ $showingList.on('click', function (e) {
 });
 
 
-// ================== замена цвета хедера ================
+// ============================== замена цвета хедера ===================================
 
-const header = document.querySelector('.header');
+const _headerGround = document.querySelectorAll('.header');
+const headerGround = Array.from(_headerGround);
+
+const _headerElements = document.querySelectorAll('.header__logo a, .header__menu a, .header__phone ');
+const headerElements = Array.from(_headerElements);
+
+const _burgerLines = document.querySelectorAll(".header__burger-line-1, .header__burger-line-2, .header__burger-line-3");
+const burgerLines = Array.from(_burgerLines);
+
+console.log(headerGround);
 
 window.addEventListener("scroll", function () {
   const offset = window.pageYOffset;
 
-  if (offset > 600) {
-    header.classList.add("header__colors");
+  if (offset > 750) {
+    headerGround.map(el => el.classList.add("header__ground-bg"));
+    headerElements.map(el => el.classList.add("header__color-maindark"));
+    burgerLines.map(el => el.classList.add("header__ground-maindark"));
   }
 
   else {
-    header.classList.remove("header__colors");
+    headerGround.map(el => el.classList.remove("header__ground-bg"));
+    headerElements.map(el => el.classList.remove("header__color-maindark"));
+    burgerLines.map(el => el.classList.remove("header__ground-maindark"));
   }
 });

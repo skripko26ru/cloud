@@ -1,19 +1,19 @@
 -
-	var list = [	
+	var competenceList = [	
 		{ name: 'native',     label: 'Native App', text: 'Нативные приложения оптимизированы под конкретные операционные системы, такие как IOS/Android' },
 		{ name: 'prototype',  label: 'Prototype',  text: 'Создание интерактивных высокоточных прототипов является средством измерения эффективности дизайна' },
-		{ name: 'design',     label: 'Designе',    text: '«Дизайн – это не только, как предмет выглядит и ощущается. Дизайн – это то, как он работает» Стив Джобс' },
+		{ name: 'design',     label: 'Design',    text: '«Дизайн – это не только, как предмет выглядит и ощущается. Дизайн – это то, как он работает» Стив Джобс' },
 		{ name: 'backend',    label: 'Back-end',   text: 'Наша команда - это опытные разработчики Php/MySQL/PostgreSQL' },
 		{ name: 'frontend',   label: 'Front-end',  text: 'Наша команда - это опытные разработчики Java Script/React Native/Vue/Angular/Type Script' },
 		{ name: 'middleware', label: 'MiddleWare', text: 'Комплекс технологического программного обеспечения для взаимодействия между приложениями, системами и компонентами' },
 	]
 
-.screen(data-pager="3").container
-	.competence 
-		.title.competence__title Наши компетенции 
-		.competence__wrap
-			each item in list
-				.competence__item(class= (item === list[0]? 'competence--active' : ''))
+.competence.screen(data-pager="3")
+	.container
+		.competence__wrapper
+			.competence__title.title Наши компетенции
+			each item in competenceList
+				.competence__item(class= (item === competenceList[0]? 'competence--active' : ''))
 					.competence__header
 						img.competence__img(src= '/../assets/img/'+ item.name +'.png' alt= item.name)
 						span.competence__label= item.label

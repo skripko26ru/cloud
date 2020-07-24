@@ -1,54 +1,19 @@
-.cli {
+.client {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media screen and (max-width: 640px) {
     flex-direction: column-reverse;
     justify-content: center;
-    margin-bottom: 300px;
-  }
-
-  @media screen and (max-width: 480px) {
-    margin-bottom: 100px;
-  }
-
-  &__wrap > .container {
-    @media screen and (max-width: 380px) {
-      height: 300px;
-    }
-  }
-
-  &__title {
-    color: $MainDark;
-
-    @media screen and (max-width: 640px) {
-      display: none;
-    }
-  }
-
-  &__hidden-title {
-    color: $MainDark;
-    display: none;
-
-    @media screen and (max-width: 640px) {
-      display: block;
-      margin: 80px auto 0;
-    }
-
-    @media screen and (max-width: 480px) {
-      font-size: 24px;
-      text-align: center;
-      margin-top: 80px;
-    } 
+    margin-bottom: 50px;
   }
 
   &__content {
     width: 460px;
-    margin-top: 170px;
 
-    @media screen and (max-width: 800px) {
-      width: 300px;
-      margin-top: 100px;
+    @media screen and (max-width: 1000px) {
+      width: 50%;
     }
 
     @media screen and (max-width: 640px) {
@@ -57,61 +22,67 @@
     }
   }
 
-  &__text {
-    margin: 50px 0;
-    line-height: 170%;
+  &__title {
+    color: $MainDark;
 
-    @media screen and (max-width: 480px) {
-      font-size: 16px;
-      margin: 20px 0;
+    @media screen and (max-width: 1000px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+
+  &__title-mobile {
+    color: $MainDark;
+    display: none;
+
+    @media screen and (max-width: 640px) {
+      display: block;
+      margin: 30px auto 44px 10%;
+    }
+  }
+
+  &__text {
+    margin: 46px 0 51px;
+
+    @media screen and (max-width: 640px) {
+      margin: 0 0 51px;
     }
   }
 
   &__load {
-    width: 200px;
-    height: 32px;
-    position: relative;
+    display: flex;
+    justify-content: flex-start;
     margin-left: 100px;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1000px) {
       margin: 0;
-    }
-
-    &-label {
-      position: absolute;
-      top: 2px;
-      font-size: 20px;
-
-      @media screen and (max-width: 650px) {
-        font-size: 18px;
-      }
-    }
-
-    &-apple {
-      position: absolute;
-      left: 115px;
-    }
-
-    &-android {
-      position: absolute;
-      left: 170px;
     }
   }
 
+  &__apple {
+    margin-left: 40px;
+  }
+
+  &__android {
+    margin-left: 40px;
+  }
+
   & .showing__image {
-    @media screen and (max-width: 650px) {
-      display: block;
-      width: 50%;
-      margin: 0 0 -20% 20%;
+    @media screen and (max-width: 640px) {
+      display: flex;  
+      width: 60vw;      
     }
 
-    @media screen and (max-width: 480px) {
-      width: 40%;
-      margin: -10% 0 -40% 28%;
+    @media screen and (max-width: 500px) {      
+      width: 70vw;      
     }
 
-    @media screen and (max-width: 380px) {
-      margin-botton: 45%;
+    @media screen and (max-width: 420px) {      
+      width: 85vw;
+      height: 60vh;
     }
   }
 }

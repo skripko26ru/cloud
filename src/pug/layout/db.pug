@@ -4,8 +4,7 @@ block maindb
 			{ name: 'about', title: 'Компания', href: '/about'},
 			{ name: 'projects', title: 'Проекты', href: '/projects'},
 			{ name: 'services', title: 'Услуги', href: '/services'},
-			{ name: 'contacts', title: 'Контакты', href: '/contacts'},			
-			{ name: 'blog', title: 'Блог', href: '/blog'}
+			{ name: 'contacts', title: 'Контакты', href: '/contacts'},					
 		]
 
 	-
@@ -26,5 +25,5 @@ block maindb
 		]  
 
 	-
-		var navList = [{ name: 'main', href: '/' }, ...navHeader, ...navFooter.filter(nav => nav.name)];
+		var navList = [{ name: 'main', href: '/' }, ...navHeader, navFooter[1]];
 
