@@ -22,6 +22,10 @@
   &__title {
     width: 100%;
     margin: 200px 0 50px;
+    
+    @media screen and (max-width: 1300px) {
+      margin-top: 150px;
+    }
 
     @media screen and (max-width: 640px) {
       margin: 50px 10% 50px;

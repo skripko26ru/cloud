@@ -100,33 +100,3 @@ $showingList.on('click', function (e) {
   else if ($id === 'rsh') perf($rshBg, $rshImg);
   else if ($id === 'alp') perf($alpBg, $alpImg);
 });
-
-
-// ============================== замена цвета хедера ===================================
-
-const _headerGround = document.querySelectorAll('.header');
-const headerGround = Array.from(_headerGround);
-
-const _headerElements = document.querySelectorAll('.header__logo a, .header__menu a, .header__phone ');
-const headerElements = Array.from(_headerElements);
-
-const _burgerLines = document.querySelectorAll(".header__burger-line-1, .header__burger-line-2, .header__burger-line-3");
-const burgerLines = Array.from(_burgerLines);
-
-console.log(headerGround);
-
-window.addEventListener("scroll", function () {
-  const offset = window.pageYOffset;
-
-  if (offset > 750) {
-    headerGround.map(el => el.classList.add("header__ground-bg"));
-    headerElements.map(el => el.classList.add("header__color-maindark"));
-    burgerLines.map(el => el.classList.add("header__ground-maindark"));
-  }
-
-  else {
-    headerGround.map(el => el.classList.remove("header__ground-bg"));
-    headerElements.map(el => el.classList.remove("header__color-maindark"));
-    burgerLines.map(el => el.classList.remove("header__ground-maindark"));
-  }
-});

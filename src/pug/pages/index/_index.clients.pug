@@ -6,14 +6,14 @@
 		{ name: 'alp', logo: '/../assets/img/logo-alpha.png'},
 		{ name: 'akb', logo: '/../assets/img/logo-akbars.png'},
 		{ name: 'rsh', logo: '/../assets/img/logo-rshb.png'},				
-		{ name: 'gen', logo: '/../assets/img/logo-geninv.png'},				
+		{ name: 'gen', logo: '/../assets/img/logo-geninv.png'}
 	]
 
 .clients.screen(data-pager="2")
 	.container
 		.clients__title.title Наши клиенты
 		.clients__text Мы помогаем крупному и среднему бизнесу разрабатывать новые digital–продукты
-		.clients__list
+		.clients__list(style='left: 400px')
 			each item in clientsList
 				.clients__item
 					img(src= item.logo alt= item.name)

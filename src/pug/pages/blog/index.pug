@@ -11,7 +11,7 @@ block head
 	)
 
 block header
-	+header('#F9F9FD')
+	+header()
 
 block content
 	main
@@ -25,6 +25,7 @@ block content
 				{ date: '20.09.2019 г.', link: 'vtb-lider-2019.html', content: 'Банк ВТБ стал безусловным лидером российского рынка' },
 			]
 
+		.plate
 		.blog.container
 			.title.blog__title Журнал событий
 			.blog__container
@@ -34,11 +35,9 @@ block content
 						.blog__line
 						.blog__text= item.content
 						.blog__wrap
-							.blog__read
-								a(href=`/blog/${item.link}`) Читать далее
-							.blog__arrow
-								a(href=`/blog/${item.link}`) 	
-									img(src= '/../assets/img/arrow-1.png' alt= 'native')
+							a.blog__read(href=`/blog/${item.link}`) Читать далее
+							a.blog__arrow(href=`/blog/${item.link}`) 	
+								img(src= '/../assets/img/arrow-1.png' alt= 'native')
 
 block footer
-	+footer('', false)
+	+footer('#F9F9FD', false)

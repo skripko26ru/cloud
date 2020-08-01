@@ -18,14 +18,15 @@ html(lang='en')
 			+head('Digital Cloud')
 
 	body.screen-0
+		//- +ball()
 		block header
 			+header()
 		block content		
 		block footer
 			+footer(false, true, false)
-		//- +ball()
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
 		script(src="https://unpkg.com/imask")
 		script(src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript")
+
 	block bodyEnd
 

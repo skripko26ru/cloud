@@ -1,6 +1,6 @@
 const input = document.querySelector('.discussion__input');
 const form = document.querySelector('.discussion__form');
-const result = document.querySelector('.discussion__result');
+const result = document.querySelector('.discussion__error');
 const url = "mail.php";
 
 function phoneClear(phone) {

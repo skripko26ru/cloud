@@ -15,6 +15,6 @@
 			each item in competenceList
 				.competence__item(class= (item === competenceList[0]? 'competence--active' : ''))
 					.competence__header
-						img.competence__img(src= '/../assets/img/'+ item.name +'.png' alt= item.name)
+						img.competence__img(src= '/../assets/img/icon-'+ item.name +'.png' alt= item.name)
 						span.competence__label= item.label
 					.competence__text= item.text

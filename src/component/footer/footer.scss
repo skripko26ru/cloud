@@ -1,68 +1,47 @@
 .footer {
-  width: 100%;
-  height: 140px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0 80px 80px;
+  width: 100%;
   z-index: 2;
 
   @media screen and (max-width: 1100px) {
     display: none;
   }
 
-  @media screen and (max-width: 640px), screen and (max-height: 700px) {
-    padding: 0 0 40px;
-  }
-  @media screen and (max-width: 500px), screen and (max-height: 500px) {
-    padding: 0 0 30px;
-  }
-
   &__menu {
-    align-self: flex-end;   
- 
-    @media screen and (max-width: 1100px), screen and (max-height: 700px) {
-      display: none;
-    }
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
 
     .screen-6 & {
-      display: none;      
+      display: none;
     }
   }
 
   &__hidden {
     display: none;
 
-    @media screen and (max-width: 640px) {
-      display: none;
-    }
-    
     .screen-6 & {
-      display: block;
-      color: $MainDark;
-      margin-top: 45px;
+      display: block;      
+      position: absolute;
+      bottom: 50px;
+      right: 80px;
       text-align: end;
-
-      @media screen and (max-width: 500px) {
-        display: none;
-      }
+      color: $MainDark;        
     }
   }
 
   &__confidence {
-    align-self: flex-end;    
+    align-self: flex-end;
 
     @media screen and (max-width: 950px) {
       display: none;
     }
   }
 
-  &__nav {
-    right: 180px;
+  &__nav {    
     margin: 0 26px;
     color: $MainDark;
 
@@ -72,9 +51,9 @@
   }
 
   &__pager {
-    @media screen and (max-width: 950px) {
-      display: none;
-    }
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
 
     &-hidden {
       visibility: hidden;

@@ -5,10 +5,11 @@ block db
 	- var navActive = 'blog';
 
 block header
-	+header('#F9F9FD')
+	+header()
 
 block content
 	main
+		.plate
 		.post.container
 			.title.post__title 
 				| Банк ВТБ стал безусловным лидером российского рынка по объемам привлечения средств в паевые инвестиционные 
@@ -43,8 +44,8 @@ block content
 				| Управление активами.
 
 
-
-
+block footer
+	+footer('#F9F9FD', false)
 
 
 

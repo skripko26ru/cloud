@@ -18,10 +18,11 @@ block head
 	)
 
 block header
-	+header('#F9F9FD')
+	+header()
 
 block content
 	main
+		.plate
 		.about.container
 			.about__title.title Мы		
 			each item in aboutList
@@ -89,7 +90,7 @@ block content
 				.text.about__text-3 Соблюдение инвестиционных деклараций.
 
 block footer
-	+footer('', false)
+	+footer('#F9F9FD', false)
 
 
 

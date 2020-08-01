@@ -1,35 +1,46 @@
-// ==================== шарик бегает за курсором ====================================
+// // ==================== Круг следует за курсором ====================================
 
-document.addEventListener("DOMContentLoaded", function () {
-  let X = Y = -10;
-  let ball = document.querySelector('.ball');
+// let ball = document.querySelector('.ball');
 
-  function move() {
-    ball.style.left = X + 'px';
-    ball.style.top = Y + 'px';
-  }
+// document.addEventListener("DOMContentLoaded", function () {
+//   let X = Y = 0;
 
-  document.addEventListener("mousemove", function (e) {
-    X = e.pageX - 5;
-    Y = e.pageY - 5;
-  }, false);
+//   document.addEventListener("mousemove", function (e) {
+//     X = e.pageX - 10;
+//     Y = e.pageY - 10;
+//   });
 
-  setInterval(move, 100);
-});
+//   function move() {
+//     ball.style.left = X + 'px';
+//     ball.style.top = Y + 'px';
+//   }
 
-
-// ==================== шарик увеличивается над ссылкой  ====================================
-
-let $headers = $('a, .competence__label, .competence__img');
-let $ball = $('.ball');
-
-$headers.mousemove(function (e) {
-  $ball.addClass('bigball'); 
-});
-
-$headers.mouseout(function (e) {
-  $ball.removeClass('bigball');
-});
+//   setInterval(move, 100);
+// });
 
 
+// // ==================== Круг увеличивается над ссылкой  ====================================
+
+// let $ball = $('.ball');
+// let $links = $(
+// 'a:not(a.block-link, a.blog__read, a.blog__arrow, a.client__apple, a.client__android, a.client__title)');
+// let $selectors = $(
+// '.competence__wrapper, .showing__content, .showing a, .discussion__form, .contacts__map, .blog__item, .client__content');
+
+
+// $links.mouseover(function (e) {
+//   $ball.addClass('bigball');
+// });
+
+// $links.mouseout(function (e) {
+//   $ball.removeClass('bigball');
+// });
+
+// $selectors.mouseover(function (e) {
+//   $ball.removeClass('ball');
+// });
+
+// $selectors.mouseout(function (e) {
+//   $ball.addClass('ball');
+// });
 

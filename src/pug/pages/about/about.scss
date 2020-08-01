@@ -1,11 +1,21 @@
 .about {
+  padding-top: 200px;
+
+  @media screen and (max-width: 1300px) {
+    padding-top: 150px;
+  }
+
   @media screen and (max-width: 1000px) {
     width: 80%;
     margin: 0 10%;
   }
 
+  @media screen and (max-width: 640px) {
+    padding-top: 0;
+  }
+
   &__title {
-    margin: 250px 0 77px;
+    margin-bottom: 77px;
 
     @media screen and (max-width: 640px) {
       margin: 40px 0 46px;      

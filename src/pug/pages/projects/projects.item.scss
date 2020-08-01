@@ -12,6 +12,11 @@
     background-color: $BlueDark;    
   }
 
+  &__plate {
+    @extend .plate;
+    display: none;
+  }
+
   &__text {
     margin: 45px 0;
   }

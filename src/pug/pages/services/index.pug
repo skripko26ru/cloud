@@ -11,7 +11,7 @@ block head
 	)
 
 block header
-	+header('#F9F9FD')
+	+header()
 
 block content
 	-
@@ -25,6 +25,7 @@ block content
 		]
 
 	main
+		.plate
 		.services.container
 			.title.services__title Наши компетенции
 			.services__intro
@@ -79,7 +80,7 @@ block content
 				each item in servicesList
 					.services__item(class= (item === servicesList[0]? 'services--active' : ''))
 						.services__header
-							img.services__img(src= '/../assets/img/'+ item.name +'.png' alt= item.name)
+							img.services__img(src= '/../assets/img/icon-'+ item.name +'.png' alt= item.name) 			
 							span.services__label= item.label
 						.services__description= item.text
 
@@ -121,4 +122,4 @@ block content
 					| наработки позволят объединить функционал площадок и торговых бирж в едином приложении.
 
 block footer
-	+footer('', false)
+	+footer('#F9F9FD', false)
