@@ -50,6 +50,14 @@
     }
   }
 
+  &__nav-opacity {    
+    @extend .footer__nav;
+    opacity: 0;
+    animation: foot 2s ease-out 3s 1;
+    animation-fill-mode: forwards;
+  }
+
+
   &__pager {
     position: absolute;
     bottom: 50px;
@@ -60,6 +68,13 @@
     }
   }
 
+  &__pager-opacity {    
+    @extend .footer__pager;
+    opacity: 0;
+    animation: foot 2s ease-out 3s 1;
+    animation-fill-mode: forwards;
+  }
+
   // ====================== привязка стиля к конкретной странице ======================================
 
   .screen-5 & a {
@@ -68,5 +83,14 @@
 
   .screen-5 & {
     color: $White;
+  }
+}
+
+@keyframes foot {
+  from {
+    opacity: 0;  
+  }
+  to {
+    opacity: 1;   
   }
 }

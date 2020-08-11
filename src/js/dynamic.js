@@ -49,7 +49,8 @@ const $showingList = $('.showing__title');
 
 const $wrap = $('.showing__wrap');
 const $image = $('.showing__image');
-const $header = $('.header__logo a, .header__nav, .header__phone, .footer__nav, .footer-pager');
+const $header = $('.header__logo,.header__logo a, .header__nav, .header__nav-opacity, .header__phone, .header__phone-opacity,.footer__nav, .footer__nav-opacity,.footer-pager');
+
 const $footer = $('.footer-pager__progress');
 const $lines = $('.header__burger-line-1, .header__burger-line-2, .header__burger-line-3');
 

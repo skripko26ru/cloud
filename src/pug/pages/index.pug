@@ -10,6 +10,9 @@ block head
 		'CloudFactory, банковские и брокерские приложения, 13 лет на рынке '
 	)
 
+block header
+	+header('','',true)
+
 block content	
 	main.container
 		include ./index/_index.banner.pug
@@ -19,6 +22,9 @@ block content
 		include ./index/_index.competence.pug			
 		include ./index/_index.showing.pug							
 		include ./index/_index.discussion.pug			
-	
+
+block footer
+	+footer('', true, false, true)
+
 
 

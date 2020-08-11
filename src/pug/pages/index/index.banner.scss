@@ -1,37 +1,55 @@
 .banner {
-  background-image: url(../img/background.jpg);
-  background-size: cover;
+  background: url(../img/cloud-2.png) no-repeat fixed, url(../img/cloud-3.png) no-repeat fixed,
+    url(../img/cloud-4.png) no-repeat fixed, url(../img/cloud-5.png) no-repeat fixed,
+    url(../img/cloud-6.png) no-repeat fixed, url(../img/cloud-7.png) no-repeat fixed,
+    url(../img/cloud-8.png) no-repeat fixed, url(../img/cloud-9.png) no-repeat fixed,
+    $White url(../img/cloud-1.png) no-repeat fixed;
 
   @media screen and (max-width: 640px) {
-    width: 100vw;
+    background: url(../img/background.jpg);
+    background-size: cover;
+    animation: none;
     height: 100vh;
+    margin-top: -50px;
+  }
+
+  animation: clouds 2.5s linear 2.5s 1;
+  animation-fill-mode: forwards;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 640px) {
+      margin: 0 0 12px 10%;
+    }
+  }
+
+  &__line {
+    width: 40px;
+    height: 2px;
+    margin: 20px 12px 0 0;
+    background-color: $MainDark;
+    opacity: 0;
+    animation: opacity 2.5s ease-in-out 2.5s 1;
+    animation-fill-mode: forwards;
+
+    @media screen and (max-width: 640px) {
+      width: 17px;
+      height: 1px;
+      margin-right: 7px;     
+    }
   }
 
   &__title {
-    position: relative;
-    padding-left: 52px;
-    margin-bottom: 16px;
     font-family: $mediumFont;
     font-size: 24px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 55%;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background: $MainDark;
-
-      @media screen and (max-width: 640px) {
-        width: 17px;
-        height: 1px;
-        left: 20px;
-      }
-    }
+    opacity: 0;
+    animation: opacity 2.5s ease-in-out 2.5s 1;
+    animation-fill-mode: forwards;
 
     @media screen and (max-width: 640px) {
-      padding-left: 47px;
       margin: 0 10% 0 5%;
     }
   }
@@ -41,11 +59,38 @@
     font-family: $extraBoldFont;
     font-size: 60px;
     line-height: 130%;
+    opacity: 0;
+    animation: opacity 2.5s ease-in-out 2.5s 1;
+    animation-fill-mode: forwards;
 
     @media screen and (max-width: 640px) {
       width: 80%;
       margin: 0 10%;
       font-size: 36px;
     }
+  }
+}
+
+@keyframes clouds {
+  from {
+    background-position: 0 0, 0 0, 0 0, 0 40%, 0 80%, 0 50%, 100% 0, 0 0, 100% 100%;
+
+    color: $White;
+    background-color: $White;
+  }
+  to {
+    background-position: 350% -200%, 150% -300%, -50% 300%, 40% 0, 100% 125%, -500% 50%, 280% 0, -200% 100%, -100% -100%;
+
+    color: $MainDark;
+    background-color: rgb(217, 229, 238);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

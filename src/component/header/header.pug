@@ -1,12 +1,18 @@
-mixin header(color, text, opts)
+mixin header(color, text, opacity)
 	.header(style=`color: ${color};`)
 		a.header__logo(href='/' style=`color: ${color}`)= text
 		.header__shade-hidden
 		.container
 			.header__menu
 				each nav in navHeader
-					a.header__nav(style=`color: ${color}` href= nav.href class=(nav.name === navActive ? 'header__nav-active' : ''))= nav.title
-			.header__phone(style=`color: ${color}`) +7 (999) 745-55-55				
+					if opacity
+						a.header__nav-opacity(style=`color: ${color}` href= nav.href class=(nav.name === navActive ? 'header__nav-active' : ''))= nav.title
+					else
+						a.header__nav(style=`color: ${color}` href= nav.href class=(nav.name === navActive ? 'header__nav-active' : ''))= nav.title	
+			if opacity		
+				.header__phone-opacity(style=`color: ${color}`) +7 (999) 745-55-55
+			else
+				.header__phone(style=`color: ${color}`) +7 (999) 745-55-55					
 
 		.header__nav-hidden
 			.header__menu-hidden

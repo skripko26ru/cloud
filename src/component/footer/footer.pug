@@ -1,13 +1,20 @@
 include ../footer-pager/footer-pager
 
-mixin footer(background, pager, write) 
+mixin footer(background, pager, write, opacity) 
 	.footer(style=`background-color: ${background}`)
-		if pager		
-			.footer__pager
-				+footerPager(5)
+		if pager
+			if opacity
+				.footer__pager-opacity
+					+footerPager(5)
+			else 		
+				.footer__pager
+					+footerPager(5)
 			.footer__menu
 				each item in navFooter
-					a.footer__nav(href= item.href)= item.title
+					if opacity
+						a.footer__nav-opacity(href= item.href)= item.title
+					else
+						a.footer__nav(href= item.href)= item.title
 			.footer__hidden
 				each item in requestFooter
 					a.footer__nav(href= item.href)= item.title		
@@ -17,14 +24,20 @@ mixin footer(background, pager, write)
 				+footerPager(5)
 			.footer__menu
 				each item in writeUs
-					a.footer__nav(href= item.href)= item.title				
+					if opacity
+						a.footer__nav-opacity(href= item.href)= item.title
+					else
+						a.footer__nav(href= item.href)= item.title			
 
 		else	
 			.footer__pager-hidden
 				+footerPager(5)
 			.footer__menu
 				each item in navFooter
-					a.footer__nav(href= item.href)= item.title		
+					if opacity
+						a.footer__nav-opacity(href= item.href)= item.title
+					else
+						a.footer__nav(href= item.href)= item.title	
 
 
 
