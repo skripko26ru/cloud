@@ -29,6 +29,10 @@
     .screen-5 & {
       background-color: $White;
     }
+
+    .screen-6 & {
+      background-color: $MainDark !important;
+    }  
   }
 
   // ====================== привязка стиля к конкретной странице ======================================
@@ -41,3 +45,6 @@
     color: $White;
   }
 }
+
+
+

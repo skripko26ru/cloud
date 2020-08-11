@@ -1,7 +1,6 @@
-mixin header(color, opts)
+mixin header(color, text, opts)
 	.header(style=`color: ${color};`)
-		.header__logo
-			a(href='/' style=`color: ${color}`) digital cloud_
+		a.header__logo(href='/' style=`color: ${color}`)= text
 		.header__shade-hidden
 		.container
 			.header__menu

@@ -22,8 +22,8 @@ function getPugFromDir(base, dir = '') {
     .forEach(file => {
       const filepath = path.join(dir, file);
       if (file.endsWith(".pug") && file[0] !== '_') temp.push(filepath);
-      else if (!file.includes('.')) temp.push(...getPugFromDir(base, filepath))
-    })
+      else if (!file.includes('.')) temp.push(...getPugFromDir(base, filepath));
+    });
   return temp;
 }
 
@@ -33,6 +33,7 @@ module.exports = {
   },
   entry: {
     index: PATHS.src,
+    common: `${PATHS.src}/common.js`,
     about: `${PATHS.src}/about.js`,
     blog: `${PATHS.src}/blog.js`,
     blog_item: `${PATHS.src}/blog-item.js`,
@@ -121,7 +122,7 @@ module.exports = {
     ...PAGES.map((page, index) => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/, '.html')}`,
-      chunks: [`${CHUNKS[index]}`]      
+      chunks: [`${CHUNKS[index]}`, 'common']
     }))
   ]
 };

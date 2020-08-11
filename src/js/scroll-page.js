@@ -23,8 +23,6 @@ const awardsList = document.querySelector(".awards__list");
 function scrollVertical(e) {
   const needToScroll = document.querySelector('.screen--active').classList[0];
   const dir = direction(e);
-  // console.log('ClientWidth', clientWidth);
-  // console.log('NEEDTOSCROLL:', needToScroll);
 
   if (needToScroll === 'intro' && clientWidth < 1700) {
     window.removeEventListener('mousewheel', scrollVertical);
@@ -90,11 +88,8 @@ function pageMove(page, container, direction, left) {
 function scrollIntro(e) {
   let introListLeft = parseInt(introList.style.left.replace('px', ''));
   introList.style.left = `${introListLeft - e.deltaY}px`;
-  // console.log("introListLeft", introListLeft); 
 
-
-  // if (introListLeft < -600) {
-  if ( 1100 > clientWidth < 1700 && introListLeft < 0) {  
+  if (1100 > clientWidth < 1700 && introListLeft < 0) {
     pageMove(intro, introList, 1, 400);
   }
 
@@ -110,7 +105,6 @@ function scrollIntro(e) {
 function scrollClients(e) {
   let clientsListLeft = parseInt(clientsList.style.left.replace('px', ''));
   clientsList.style.left = `${clientsListLeft - e.deltaY}px`;
-  // console.log("clientsListLeft", clientsListLeft);
 
   if ((clientWidth > 1900 && clientsListLeft < -100) || (1100 > clientWidth < 1900 && clientsListLeft < -700)) {
     pageMove(clients, clientsList, 1, 400);
@@ -128,9 +122,8 @@ function scrollClients(e) {
 function scrollAwards(e) {
   let awardsListLeft = parseInt(awardsList.style.left.replace('px', ''));
   awardsList.style.left = `${awardsListLeft - e.deltaY}px`;
-  // console.log("awardsListLeft", awardsListLeft); 
 
-  if ( 1100 > clientWidth < 1800 && awardsListLeft < -100) {  
+  if (1100 > clientWidth < 1800 && awardsListLeft < -100) {
     pageMove(awards, awardsList, 1, 400);
   }
 
@@ -164,6 +157,3 @@ $(window).touchwipe({
   preventDefaultEvents: false
 });
 
-// document.querySelector(".intro").removeEventListener('mousewheel', scrollIntro);
-// document.querySelector(".clients").removeEventListener('mousewheel', scrollClients);
-// document.querySelector(".awards").removeEventListener('mousewheel', scrollAwards);

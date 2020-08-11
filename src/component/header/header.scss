@@ -108,6 +108,7 @@
     &-active {
       @extend .header__nav;
       background-color: $White;
+      cursor: default;
     }
   }
 

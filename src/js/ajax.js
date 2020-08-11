@@ -1,3 +1,5 @@
+import IMask from 'imask';
+
 const input = document.querySelector('.discussion__input');
 const form = document.querySelector('.discussion__form');
 const result = document.querySelector('.discussion__error');
@@ -29,7 +31,8 @@ form.addEventListener('submit', function (e) {
 
 });
 
-new IMask(input, {
-  mask: '+{7} (000) 000-00-00',
+IMask(
+  input, {
+  mask: '+{7} (000) 000-00-00'
 });
 
