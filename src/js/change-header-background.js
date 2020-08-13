@@ -1,7 +1,7 @@
 // ==================================== замена цвета хедера при скроллинге ========================================================
 
 const plateBlue = document.querySelector('.plate-blue');
-const headerElements = Array.from(document.querySelectorAll('.header__logo a, .header__menu a, .header__phone '));
+const headerElements = Array.from(document.querySelectorAll('.header__logo, .header__logo a, .header__menu a, .header__phone '));
 const burgerLines = Array.from(document.querySelectorAll(".header__burger-line-1, .header__burger-line-2, .header__burger-line-3"));
 
 window.addEventListener("scroll", function () {
@@ -11,8 +11,6 @@ window.addEventListener("scroll", function () {
     plateBlue.style.backgroundColor = "#F9F9FD";
     headerElements.map(el => el.classList.add("header__color-maindark"));
     burgerLines.map(el => el.classList.add("header__ground-maindark"));
-
-
   }
 
   else {

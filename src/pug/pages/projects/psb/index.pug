@@ -1,0 +1,60 @@
+extends ../../../layout/main.pug
+include ../../../../component/header/header
+
+block db
+	- var navActive = 'projectss';
+
+block head
+	+head(
+		'ПСБ', 
+		'Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ',
+		'ПСБ, банковское и брокерское приложение, лучшее инвестиционное приложение'
+	)
+
+block header
+	+header('white', 'digital cloud_')
+
+block content
+	main
+		.plate-blue 
+		.projects__plate
+		.projects__ground
+			.projects
+
+				.projects__block-1
+					.projects__content-1.white
+						.title.projects__ ПСБ
+						.text.projects__text Приложение предоставляет доступ к широкому перечню инвестиционных инструментов Группы ВТБ и ориентировано на клиентов, самостоятельно управляющих  своими инвестициями
+						.text «Лучшее инвестиционное приложение»
+					.projects__phone-1
+						img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+				.projects__content-2
+					.title Процесс работы
+					.text.projects__text  С момента начала сотрудничества выпущено несколько релизов приложения, внедрены самые современные сервисы, включая персонального советника.
+					.text Мобильное приложение работает  на платформе EffectiveTrade Mobile.
+
+				.projects__block-2
+					.projects__phone-2
+						img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+					.projects__phone-3
+						img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+				.projects__content-2
+					.title Процесс работы
+					.text.projects__text  С момента начала сотрудничества выпущено несколько релизов приложения, внедрены самые современные сервисы, включая персонального советника.
+
+				.projects__block-2
+					.projects__phone-4
+						img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+					.projects__phone-5
+						img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+				.projects__content-3
+					.text Мобильное приложение работает  на платформе EffectiveTrade Mobile.
+
+				.projects__phone-6
+					img(src= '/../assets/img/_portfolio-vtb.png' alt= 'portfolio')
+
+block footer
+	+footer('', false)

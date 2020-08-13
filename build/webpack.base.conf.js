@@ -14,7 +14,10 @@ const PATHS = {
 // Pages const for HtmlWebpackPlugin
 const PAGES_DIR = `${PATHS.src}/pug/pages`;
 const PAGES = getPugFromDir(PAGES_DIR);
-const CHUNKS = PAGES.map(el => el.replace('.pug', '').replace(/\\index$/, '').replace(/^blog.+/, 'blog_item').replace(/^projects.+/, 'projects_item'));
+const CHUNKS = PAGES.map(el => el.replace('.pug', '').replace(/\\index$/, '').replace(/^blog\\/, '').replace(/^projects\\/, '').replace(/^post.*/, 'post'));
+
+console.log("Pages", PAGES);
+console.log("Chunks", CHUNKS);
 
 function getPugFromDir(base, dir = '') {
   const temp = [];
@@ -36,11 +39,12 @@ module.exports = {
     common: `${PATHS.src}/common.js`,
     about: `${PATHS.src}/about.js`,
     blog: `${PATHS.src}/blog.js`,
-    blog_item: `${PATHS.src}/blog-item.js`,
     services: `${PATHS.src}/services.js`,
     contacts: `${PATHS.src}/contacts.js`,
     projects: `${PATHS.src}/projects.js`,
-    projects_item: `${PATHS.src}/projects-item.js`,
+    vtb: `${PATHS.src}/projects-item.js`,
+    psb: `${PATHS.src}/projects-item.js`,
+    post: `${PATHS.src}/blog-item.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash].js`,
