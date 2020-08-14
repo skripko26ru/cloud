@@ -21,7 +21,7 @@ block content
 				.title.contacts__title Давайте обсудим Ваш проект
 
 				.contacts__wrap
-					form.discussion__form.contacts__form
+					form.discussion__form(method="post" id="ajax_form" action="").contacts__form
 						img.discussion__phone(src='/../assets/img/tube.png' alt='phone icon')
 						input.discussion__input(type='text' name='phonenumber' placeholder='Введите номер телефона')
 						.discussion__line 

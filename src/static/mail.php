@@ -5,7 +5,7 @@ if (empty($_POST['phonenumber'])) {
 } else {
   $name = !empty($_POST['name']) ? $_POST['name'] : '';
   $phonenumber = $_POST['phonenumber'];
-  mail("skripko26ru@yandex.ru", "Новый клиент, перезвонить", 'Имя:'.$name.', телефон: '.$phonenumber);
+  mail("info@digitalcloud.com", "Новый клиент, перезвонить", 'Имя:'.$name.', телефон: '.$phonenumber);
   echo 'OK';
 }
 

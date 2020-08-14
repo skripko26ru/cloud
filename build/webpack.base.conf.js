@@ -34,18 +34,20 @@ module.exports = {
   externals: {
     paths: PATHS
   },
+
   entry: {
     index: PATHS.src,
     common: `${PATHS.src}/common.js`,
     about: `${PATHS.src}/about.js`,
     blog: `${PATHS.src}/blog.js`,
+    post: `${PATHS.src}/blog-item.js`,
     services: `${PATHS.src}/services.js`,
     contacts: `${PATHS.src}/contacts.js`,
     projects: `${PATHS.src}/projects.js`,
     vtb: `${PATHS.src}/projects-item.js`,
     psb: `${PATHS.src}/projects-item.js`,
-    post: `${PATHS.src}/blog-item.js`,
   },
+  
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
