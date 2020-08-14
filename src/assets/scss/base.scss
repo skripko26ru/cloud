@@ -98,8 +98,7 @@ body {
   height: 9px;
   border: 1px solid $White;
   border-radius: 50%;
-  background-color: red;
-  // background-color: $LightGrayDecor;
+  background-color: $LightGrayDecor;
   position: absolute;
   transition: all 0.3s ease;
   z-index: 2 !important;
@@ -113,8 +112,7 @@ body {
   @extend .ball;
   width: 25px;
   height: 25px;
-  background-color: rgb(165, 38, 38);
-  // background-color: rgba(229, 234, 245, 0.1);
+  background-color: rgba(229, 234, 245, 0.1);
   z-index: 2 !important;
 
   @media screen and (max-width: 640px) {

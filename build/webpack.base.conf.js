@@ -47,7 +47,7 @@ module.exports = {
     vtb: `${PATHS.src}/projects-item.js`,
     psb: `${PATHS.src}/projects-item.js`,
   },
-  
+
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
