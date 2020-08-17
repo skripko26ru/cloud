@@ -24,8 +24,7 @@ form.addEventListener('submit', function (e) {
   if (!valid) result.innerHTML = 'Введите корректный номер телефона!';
   else {
     $.post('/mail.php', { phonenumber }, function () {
-      input.value = '';
-      console.log('Her');
+      input.value = '';      
     });
   }
 

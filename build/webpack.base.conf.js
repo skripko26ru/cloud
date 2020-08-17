@@ -16,9 +16,6 @@ const PAGES_DIR = `${PATHS.src}/pug/pages`;
 const PAGES = getPugFromDir(PAGES_DIR);
 const CHUNKS = PAGES.map(el => el.replace('.pug', '').replace(/\\index$/, '').replace(/^blog\\/, '').replace(/^projects\\/, '').replace(/^post.*/, 'post'));
 
-console.log("Pages", PAGES);
-console.log("Chunks", CHUNKS);
-
 function getPugFromDir(base, dir = '') {
   const temp = [];
   fs.readdirSync(path.join(base, dir))
