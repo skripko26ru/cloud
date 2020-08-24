@@ -11,21 +11,21 @@ function init() {
     // Элементы управления: https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
     controls: [
       'zoomControl', // Ползунок масштаба
-      'rulerControl', // Линейка
-      'routeButtonControl', // Панель маршрутизации
-      'trafficControl', // Пробки
-      'typeSelector', // Переключатель слоев карты
-      'fullscreenControl', // Полноэкранный режим
+      // 'rulerControl', // Линейка
+      // 'routeButtonControl', // Панель маршрутизации
+      // 'trafficControl', // Пробки
+      // 'typeSelector', // Переключатель слоев карты
+      // 'fullscreenControl', // Полноэкранный режим
 
       // Поисковая строка
-      new ymaps.control.SearchControl({
-        options: {
-          // вид - поисковая строка
-          size: 'large',
-          // Включаем возможность искать не только топонимы, но и организации.
-          provider: 'yandex#search'
-        }
-      })
+      // new ymaps.control.SearchControl({
+      //   options: {
+      //     // вид - поисковая строка
+      //     size: 'large',
+      //     // Включаем возможность искать не только топонимы, но и организации.
+      //     provider: 'yandex#search'
+      //   }
+      // })
     ]
   });
 
